@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ibrahim Sharif | Software Engineer & DevOps</title>
+    <meta
+      name="description"
+      content="Portfolio of software engineering projects, DevOps work, collaborations, and resume."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <div id="top"></div>
+    <div class="grain"></div>
+    <div class="grid"></div>
+    <div class="intro-beam" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#top">Ibrahim Sharif</a>
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#collaborations">Collaborations</a>
+          <a href="#resume">Resume</a>
+          <a class="cta" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <h1>
+              Hi, I’m Ibrahim. I design and build full-stack software
+              applications from user interface to backend systems.
+            </h1>
+            <p class="lead">
+              I enjoy turning complex problems into simple, reliable, real-world
+              solutions.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#projects">See projects</a>
+              <a class="button ghost" href="#resume">View resume</a>
+            </div>
+            <div class="hero-metrics">
+              <div>
+                <span class="metric">4+</span>
+                <span class="label">Delivered systems</span>
+              </div>
+              <div>
+                <span class="metric">2</span>
+                <span class="label">Industry collaborations</span>
+              </div>
+              <div>
+                <span class="metric">2026</span>
+                <span class="label">Latest launches</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="hero-card__top">
+              <p>Featured project</p>
+              <h3>Automark</h3>
+            </div>
+            <div class="hero-card__body">
+              <p>
+                Automated grading platform for Western Sydney University with
+                secure sandbox execution and near‑instant feedback.
+              </p>
+              <ul>
+                <li>FastAPI · Node.js · Docker</li>
+                <li>SVN workflow with hook-triggered jobs</li>
+                <li>Role-based dashboards + audit trail</li>
+              </ul>
+            </div>
+            <div class="hero-card__footer">
+              <a href="#automark">Read more</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="container split">
+          <div>
+            <h2>About me</h2>
+            <p>
+              I’m a Software Engineer based in Sydney and a Computer Science
+              graduate from
+              <span class="highlight">Western Sydney University</span>.
+              I enjoy building end-to-end systems — designing user interfaces,
+              developing backend APIs, structuring databases, and packaging
+              everything into containerised environments that can run reliably
+              in production.
+            </p>
+            <p>
+              My interest sits at the intersection of full stack development
+              and DevOps, where software is not only written well but deployed
+              and maintained properly. Through industry projects with Deloitte
+              and Western Sydney University, I’ve worked on secure sandbox
+              execution systems, automated grading platforms, document
+              processing pipelines, and data-driven dashboards. These
+              experiences taught me how real software systems are designed,
+              integrated, and delivered beyond classroom theory.
+            </p>
+            <p>
+              I work mainly with Python, FastAPI, Node.js, React, Docker,
+              Linux, and REST APIs, and I enjoy understanding how systems
+              operate under the hood. I’m curious by nature, enjoy solving
+              practical problems, and like building software that makes
+              workflows faster, safer, and more reliable.
+            </p>
+          </div>
+          <div class="about-stack">
+            <div class="chip">Python</div>
+            <div class="chip">FastAPI</div>
+            <div class="chip">Node.js</div>
+            <div class="chip">React</div>
+            <div class="chip">Docker</div>
+            <div class="chip">Linux</div>
+            <div class="chip">REST APIs</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects" id="projects">
+        <div class="container">
+          <div class="section-header">
+            <h2>Graduate projects</h2>
+            <p>
+              End-to-end builds with real users, production constraints,
+              and measurable outcomes.
+            </p>
+          </div>
+          <article class="featured" id="automark">
+            <div class="featured-copy">
+              <span class="badge">Featured · Automark</span>
+              <h3>Automark — Automated Grading Platform</h3>
+              <p>
+                Automark is a web-based system that streamlines assignment
+                management, student submissions, and automated grading for
+                Western Sydney University. It replaces manual marking with
+                secure, containerized execution and near‑instant feedback.
+              </p>
+              <p>
+                The platform delivers role-based lecturer and student
+                dashboards, assignment setup, submission tracking, and results
+                history. A FastAPI backend exposes APIs for assignments,
+                submissions, marks, and artefacts, while Node.js handles
+                authentication with JWT and role checks. NGINX serves static
+                assets, applies secure headers, and proxies internal services.
+              </p>
+              <p>
+                Submissions flow through an SVN-backed workflow where commits
+                trigger grading jobs. A background worker invokes Docker
+                sandboxes to run marker scripts, capture outputs, and persist
+                grades to SQLite with a clear upgrade path to PostgreSQL. Logs,
+                artefacts, and CSV exports make auditing and investigation
+                straightforward.
+              </p>
+              <ul>
+                <li>Role-based dashboards for lecturers and students</li>
+                <li>Secure sandbox execution with Docker</li>
+                <li>SVN workflow with hooks, workers, and sandboxed execution</li>
+                <li>FastAPI backend + Node auth + NGINX gateway</li>
+              </ul>
+              <div class="system-map" data-active="">
+                <span class="system-label">Automark system map</span>
+                <svg viewBox="0 0 520 200" aria-hidden="true">
+                  <line class="line line-frontend-auth" x1="70" y1="60" x2="190" y2="60" />
+                  <line class="line line-auth-api" x1="190" y1="60" x2="310" y2="60" />
+                  <line class="line line-api-worker" x1="310" y1="60" x2="260" y2="140" />
+                  <line class="line line-worker-sandbox" x1="260" y1="140" x2="130" y2="140" />
+                  <line class="line line-api-db" x1="310" y1="60" x2="430" y2="140" />
+                </svg>
+                <button class="node node-frontend" data-node="frontend" type="button">
+                  Frontend
+                  <span class="tooltip">Student + lecturer dashboards</span>
+                </button>
+                <button class="node node-auth" data-node="auth" type="button">
+                  Auth
+                  <span class="tooltip">JWT roles + access control</span>
+                </button>
+                <button class="node node-api" data-node="api" type="button">
+                  API
+                  <span class="tooltip">Assignments, submissions, results</span>
+                </button>
+                <button class="node node-worker" data-node="worker" type="button">
+                  Worker
+                  <span class="tooltip">Queue + grading orchestration</span>
+                </button>
+                <button class="node node-sandbox" data-node="sandbox" type="button">
+                  Sandbox
+                  <span class="tooltip">Dockerized code execution</span>
+                </button>
+                <button class="node node-db" data-node="db" type="button">
+                  DB
+                  <span class="tooltip">Users, grades, audit trail</span>
+                </button>
+              </div>
+              <div class="tags">
+                <span>FastAPI</span>
+                <span>Docker</span>
+                <span>NGINX</span>
+                <span>Node.js</span>
+                <span>SQLite</span>
+              </div>
+            </div>
+            <div class="featured-media">
+              <div class="media-grid">
+                <figure>
+                  <img
+                    src="assets/img/dashboard.png"
+                    alt="Automark dashboard preview"
+                  />
+                  <figcaption>Automark dashboard preview.</figcaption>
+                </figure>
+                <figure>
+                  <img
+                    src="assets/img/system architecture.png"
+                    alt="Automark system architecture diagram"
+                  />
+                  <figcaption>System architecture overview.</figcaption>
+                </figure>
+                <figure>
+                  <img
+                    src="assets/img/login UI.png"
+                    alt="Automark login interface"
+                  />
+                  <figcaption>Login interface for students and staff.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Practice Interview AI</h3>
+              <p>
+                AI-powered interview practice with dynamic questions,
+                answer evaluation, and automated feedback.
+              </p>
+              <div class="tags">
+                <span>OpenAI API</span>
+                <span>Streamlit</span>
+                <span>Python</span>
+              </div>
+            </article>
+            <article class="card">
+              <h3>Supplier Risk Pulse</h3>
+              <p>
+                Full-stack dashboard that explains supplier risk based on
+                delivery delays, invoice risk, and exposure.
+              </p>
+              <div class="tags">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>REST APIs</span>
+              </div>
+            </article>
+            <article class="card">
+              <h3>Deloitte Financial Review Automation</h3>
+              <p>
+                Automated document processing that replaced manual spreadsheet
+                reviews with rule-based classification, risk flags, and
+                downloadable reporting dashboards.
+              </p>
+              <div class="tags">
+                <span>Python</span>
+                <span>Streamlit</span>
+                <span>Pandas</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="collaborations" id="collaborations">
+        <div class="container">
+          <div class="section-header">
+            <h2>University collaborations</h2>
+            <p>
+              Cross-disciplinary teams and the systems we shipped together.
+            </p>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="date">2025</span>
+              <div>
+                <h3>Western Sydney University</h3>
+                <p>
+                  Built a secure, containerized grading platform that replaced
+                  manual marking with instant automated feedback.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="date">2025</span>
+              <div>
+                <h3>Deloitte Australia (WSU Industry Project)</h3>
+                <p>
+                  Delivered automated financial document processing and risk
+                  flag dashboards for consultants.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="resume" id="resume">
+        <div class="container resume-grid">
+          <div>
+            <h2>Resume snapshot</h2>
+            <p>The quick highlights. Full PDF available on request.</p>
+            <a class="button primary" href="assets/resume/ibrahim-sharif-resume.pdf" download>
+              Download resume
+            </a>
+          </div>
+          <div class="resume-list">
+            <div>
+              <h3>Experience</h3>
+              <ul>
+                <li>Software Engineer — Western Sydney University (Industry Capstone)</li>
+                <li>Software Developer — Deloitte Australia (Industry Partner)</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Skills</h3>
+              <ul>
+                <li>Docker, NGINX, Linux, Git, container orchestration, CI/CD concepts</li>
+                <li>Full Stack & Cloud: Python, FastAPI, Node.js, Express, React, Streamlit, HTML/CSS/JavaScript, REST API design, JWT authentication</li>
+                <li>Databases & Data Processing: SQLite, PostgreSQL</li>
+                <li>Currently learning: AWS Cloud Practitioner (in progress)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="container contact-card">
+          <div>
+            <h2>Let’s build something thoughtful</h2>
+            <p>
+              I’m open to full stack development, AI integration, or software
+              engineering roles. Email me or connect on LinkedIn.
+            </p>
+          </div>
+          <div class="contact-actions">
+            <a class="button ghost" href="mailto:mohammedibrahimsharif@gmail.com">Email me</a>
+            <a class="button primary" href="https://www.linkedin.com/in/ibrahim-sharif-98b68822b">LinkedIn</a>
+            <a class="button ghost" href="https://github.com/ibrahimsheriiff">GitHub</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 Ibrahim Sharif. Crafted with care.</p>
+        <a href="#top">Back to top</a>
+      </div>
+    </footer>
+
+    <div class="modal" id="image-modal" aria-hidden="true" role="dialog">
+      <button class="modal-close" aria-label="Close image">Close</button>
+      <img src="" alt="Expanded preview" />
+    </div>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

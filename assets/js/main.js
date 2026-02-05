@@ -75,5 +75,18 @@ systemMaps.forEach((map) => {
     node.addEventListener('blur', () => {
       map.dataset.active = '';
     });
+    node.addEventListener('click', () => {
+      const isOpen = node.classList.contains('is-open');
+      nodes.forEach((n) => n.classList.remove('is-open'));
+      if (!isOpen) {
+        node.classList.add('is-open');
+        map.dataset.active = node.dataset.node;
+        nodes.forEach((n) => n.setAttribute('aria-expanded', 'false'));
+        node.setAttribute('aria-expanded', 'true');
+      } else {
+        map.dataset.active = '';
+        node.setAttribute('aria-expanded', 'false');
+      }
+    });
   });
 });

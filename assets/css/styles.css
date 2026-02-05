@@ -532,6 +532,12 @@ section {
   transform: translateX(-50%) translateY(0);
 }
 
+.node.is-open .tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
 .node-frontend {
   left: 18px;
   top: 46px;
@@ -810,32 +816,64 @@ section {
   }
 
   .system-map {
-    height: auto;
-    padding-bottom: 16px;
+    height: 190px;
+    padding: 16px;
   }
 
   .system-map svg {
-    display: none;
+    display: block;
   }
 
   .node {
-    position: static;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px 0 0;
+    position: absolute;
+    display: inline-flex;
+    font-size: 0.75rem;
+    padding: 6px 10px;
   }
 
   .node .tooltip {
-    position: static;
-    transform: none;
+    left: 50%;
+    bottom: calc(100% + 8px);
+    transform: translateX(-50%) translateY(6px);
+    white-space: normal;
+    max-width: 160px;
+    text-align: center;
+    display: block;
+    opacity: 0;
+  }
+
+  .node.is-open .tooltip {
     opacity: 1;
-    background: transparent;
-    color: var(--muted);
-    padding: 0 0 0 12px;
-    font-size: 0.75rem;
-    text-align: right;
+  }
+
+  .node-frontend {
+    left: 4%;
+    top: 28%;
+  }
+
+  .node-auth {
+    left: 28%;
+    top: 28%;
+  }
+
+  .node-api {
+    left: 52%;
+    top: 28%;
+  }
+
+  .node-worker {
+    left: 38%;
+    top: 64%;
+  }
+
+  .node-sandbox {
+    left: 14%;
+    top: 64%;
+  }
+
+  .node-db {
+    left: 74%;
+    top: 64%;
   }
 
   .media-grid figcaption {

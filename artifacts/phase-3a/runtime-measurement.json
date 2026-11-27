@@ -1,0 +1,15 @@
+{
+  "scenario": "mixed",
+  "jobs": 12,
+  "workers": 3,
+  "speed": 4,
+  "wallSecondsIncludingPause": 11.536600000023842,
+  "virtualCompletion": "42s",
+  "peakQueue": "8 jobs",
+  "completed": "12",
+  "failed": "0",
+  "longTasksOver50ms": 0,
+  "maxLongTaskMs": 0,
+  "maxDocumentNodes": 553,
+  "measurement": "Local desktop Chromium during recorded real playback, includes pause and recording overhead. Not field performance."
+}

@@ -1,0 +1,45 @@
+{
+  "phase": "2D",
+  "date": "2026-11-27",
+  "branch": "codex/portfolio-2-phase-1",
+  "build": "passed; static export of homepage and all five articles",
+  "lint": "passed without warnings",
+  "strictTypeScript": "passed",
+  "formatting": "passed",
+  "portfolioTests": {
+    "passed": 54,
+    "failed": 0,
+    "durationSeconds": 42.3,
+    "previousExecutionsRetained": 40,
+    "newExecutions": 14,
+    "projects": [
+      "desktop Chromium",
+      "iPhone-emulated Chromium"
+    ]
+  },
+  "responsiveWidths": [
+    1440,
+    1024,
+    768,
+    390,
+    320
+  ],
+  "enlargedText": {
+    "percent": 200,
+    "widths": [
+      1440,
+      768,
+      390,
+      320
+    ],
+    "overflow": false
+  },
+  "axe": "zero violations in tested desktop/mobile states; not complete WCAG certification",
+  "finalScreenshots": 87,
+  "sourceTestResults": "source-test-summary.json; separate from portfolio tests",
+  "preservationPrivacy": "preservation-privacy.json",
+  "performance": "performance-summary.json; local lab measurements, not field INP",
+  "scope": "all five primary studies complete; full Engineering Lab not started",
+  "remoteChanges": false,
+  "commitPushMergeDeploy": false
+}

@@ -1,0 +1,88 @@
+# EquityGuard — evidence and reconciliation
+
+Reviewed 27 November 2026 for portfolio Phase 2B. This is an internal authoring record, not a public site asset.
+
+## Sources and preservation
+
+- Authoritative professional source: `content-sources/resume/IBRAHIM_RESUME_Graduate.pdf`, two pages. SHA-256 `c5109e6c622a7b82ac94444b589c1d8d40926329689521b02814c3a1c7c1cff2`.
+- Repository: [Ibrahimsheriiff/equityguard](https://github.com/Ibrahimsheriiff/equityguard), pinned revision **6801099818177cb1aad758c7880dbb94901be129**. Commit timestamp: 3 June 2026, 08:11:43 UTC. Review date is distinct from commit date.
+- GitHub connector inspected revision and text sources. Its binary limitation required downloading the public codeload archive at that same SHA. The 109-file archive is retained privately in `.local/equityguard-review/`; no external repository was changed.
+- Local pre-edit recovery: `.local/recovery/pre-phase-2b.zip` and `phase-2b-manifest.json` (87 files plus working-tree patch). All earlier recoveries remain. No commits, pushes, merges or deployments.
+
+All source links below are pinned; README statements are secondary to implemented code. A complete archive was available, including React sources, Python sources, tests, CI/dependencies, original screenshots and document/store files. Stored data and trace contents were not treated as evidence of correct model output or runtime readiness, and are not republished.
+
+## Professional claim reconciliation
+
+| Claim                                                                             | Evidence classification                                        | Treatment                                                                                                                                                                                                                                   |
+| --------------------------------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Independent full-stack React/FastAPI project                                      | Authoritative résumé-supported; repository-supported           | First-person ownership of interface, service, tools and orchestration. No team or employer invented.                                                                                                                                        |
+| Six integrated tools                                                              | Repository-supported                                           | Six actual registry names listed below, not six categories of tools.                                                                                                                                                                        |
+| LangChain                                                                         | Résumé-listed technology; not the reviewed loop implementation | Retained in historical résumé inventory. Public article identifies direct Anthropic SDK orchestration. Homepage stack list is refined to implemented technologies rather than implying LangChain orchestration.                             |
+| 23 automated tests covering calculations, API integrations and workflow behaviour | Authoritative résumé accomplishment                            | Retain the 23-test achievement; qualify scope using collection/source evidence. Current suite does not exercise API integrations or a complete workflow. Do not silently erase the résumé claim or repeat its broader coverage as verified. |
+| GitHub Actions automated regression testing                                       | Repository-supported configuration                             | Three pytest invocations exist. No remote green run or deployment outcome claimed.                                                                                                                                                          |
+| Vector retrieval / ChromaDB                                                       | Implemented source path; unresolved runtime                    | Distinguish ingestion, vector query and separate filename lookup. No working production retrieval claim.                                                                                                                                    |
+| Prediction quality, financial accuracy, comprehensive safety, production scale    | Unsupported                                                    | Not published. No accuracy, coverage or reliability percentage.                                                                                                                                                                             |
+
+## Source map
+
+All paths are relative to [the reviewed tree](https://github.com/Ibrahimsheriiff/equityguard/tree/6801099818177cb1aad758c7880dbb94901be129).
+
+- [React Home](https://github.com/Ibrahimsheriiff/equityguard/blob/6801099818177cb1aad758c7880dbb94901be129/frontend/src/pages/Home.jsx): watchlist, search, selection, minute price refresh, loading/error state; POST analysis on explicit action.
+- [React Results](https://github.com/Ibrahimsheriiff/equityguard/blob/6801099818177cb1aad758c7880dbb94901be129/frontend/src/pages/Results.jsx), `App.jsx`, components, CSS and client: result state replaces Home; displays score/explanation/tools. Portfolio does not reproduce its private-reasoning display.
+- [Client API boundary](https://github.com/Ibrahimsheriiff/equityguard/blob/6801099818177cb1aad758c7880dbb94901be129/frontend/src/api/client.js): `/api/price`, `/api/analyse`, `/api/evaluate`; Vite rewrites `/api` to FastAPI. Non-OK analysis response throws its detail; price failures fall back to zero.
+- [FastAPI](https://github.com/Ibrahimsheriiff/equityguard/blob/6801099818177cb1aad758c7880dbb94901be129/api/main.py) and [schemas](https://github.com/Ibrahimsheriiff/equityguard/blob/6801099818177cb1aad758c7880dbb94901be129/api/schemas.py): typed request/response, ticker normalisation, phrase filter, regex score extraction, label, error/refusal response. `ticker: str` has no syntax/existence constraint; `Optional[int]` score has no range constraint. Trace metadata exists, but its private thought fields are neither quoted nor copied into portfolio assets.
+- [Direct loop](https://github.com/Ibrahimsheriiff/equityguard/blob/6801099818177cb1aad758c7880dbb94901be129/src/agent/react_loop.py), prompts, trace and [config](https://github.com/Ibrahimsheriiff/equityguard/blob/6801099818177cb1aad758c7880dbb94901be129/src/utils/config.py): six maximum iterations, 2,000 max tokens per model request, direct Anthropic client. `end_turn` returns joined text; `tool_use` dispatches each block and returns JSON results to the model; other stop reasons break. End/exhaustion returns a message, not guaranteed success. No general model-call/argument exception recovery in loop. Trace persistence was not executed.
+- [Registry](https://github.com/Ibrahimsheriiff/equityguard/blob/6801099818177cb1aad758c7880dbb94901be129/src/agent/tool_registry.py): JSON input schemas; name lookup and `**tool_input` dispatch; JSON serialisation with `default=str`; unknown name error. Schemas supplied to the model are not equivalent to independently enforced tool-input validation; output dictionaries are not per-tool Pydantic models.
+- [Guardrail](https://github.com/Ibrahimsheriiff/equityguard/blob/6801099818177cb1aad758c7880dbb94901be129/src/safety/financial_guardrails.py): case-insensitive substring list. No comprehensive injection defence established.
+- [Evaluator](https://github.com/Ibrahimsheriiff/equityguard/blob/6801099818177cb1aad758c7880dbb94901be129/src/evaluation/evaluator.py): separate live runner can invoke agent for non-refusal cases; compares expected tools. Error cases can be marked passing on exception. Neither runner nor `/evaluate` was invoked.
+- [CI](https://github.com/Ibrahimsheriiff/equityguard/blob/6801099818177cb1aad758c7880dbb94901be129/.github/workflows/ci.yml): Python 3.11, requirements + pytest, three individual test-file runs. Dockerfile provides a Python/FastAPI container recipe, not deployment proof.
+
+## Verified six-tool inventory
+
+Inputs below reflect declared model-tool JSON schemas and Python signatures. Outputs are success-path dictionary keys, not schema guarantees. Source-grounded contract summaries are typed in `src/content/equityguard.ts`.
+
+| Registered name / source                                            | Input                                      | Output and responsibility                                                                      | Constraint / test evidence                                                                                                                                                                                   |
+| ------------------------------------------------------------------- | ------------------------------------------ | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `get_price_data` — `src/tools/price_data.py`                        | required `ticker: string`                  | Price, previous close, change, volumes, beta, annualised 30-day volatility and 52-week extrema | yfinance; 30-day history; √252 annualisation; error dictionary on empty history/exception; defaults can hide unavailable fields. No external integration tests observed.                                     |
+| `get_technical_signals` — `src/tools/technicals.py`                 | required `ticker: string`                  | RSI value/label, MACD label, Bollinger position/label                                          | Three-month history, minimum 30 rows; 14-period RSI, 12/26/9 MACD, 20-period bands. Seven tests use test-local helpers, not this production tool; no MACD test.                                              |
+| `get_news_sentiment` — `src/tools/news.py`                          | required `ticker`, optional `company_name` | Up to eight headline/title/date/summary records                                                | Summaries truncated to 200 characters; optional company name unused. No numeric sentiment score or classifier. No news integration tests.                                                                    |
+| `get_earnings_risk` — `src/tools/earnings.py`                       | required `ticker`                          | Next date, days to earnings, proximity label                                                   | First calendar value assumed to be a usable date; 7/21/42-day thresholds; unexpected shapes can produce unknown/error. No threshold/provider tests.                                                          |
+| `retrieve_company_docs` — `src/tools/document_retrieval.py`         | required `ticker`                          | Count and combined matching file content                                                       | Exchange suffix stripped; base ticker substring matches filenames in a separate local store. Zero documents for missing store/no match. File-read errors not wrapped. Not vector search; no retrieval tests. |
+| `search_company_knowledge` — `src/rag/retriever.py` via `_rag_tool` | required `query`, optional `ticker`        | Query, ticker, chunk count, combined source-labelled context/readiness response                | SentenceTransformer embeddings, ChromaDB `company_docs`, default three results, optional base-ticker filter. Registry wrapper does not expose `n_results`. Runtime unresolved; no retrieval tests.           |
+
+## Retrieval discrepancy and reproducible limitation
+
+The README describes keyword retrieval with a future ChromaDB upgrade. Current `src/rag/ingest.py` imports ChromaDB and SentenceTransformer, chunks text from `data/company_docs`, computes embeddings and writes the persistent collection. `src/rag/retriever.py` queries vectors and optional ticker metadata. The distinct `document_retrieval.py` uses filename matching in `data/equityguard_rag_docs`.
+
+The retriever references `chromadb.PersistentClient` without importing `chromadb`. `requirements.txt` does not declare `chromadb` or `sentence-transformers`. Existing persisted store files do not establish operational readiness.
+
+Reproduction: load only the retriever with a stub `SentenceTransformer` constructor and blocked sockets. `retrieve('review-only query')` returns zero chunks and the readiness message containing **`name 'chromadb' is not defined`**. This establishes name resolution after the embedding constructor; it does not test a real model, package install, store, similarity metric or vector query. Without retrieval packages, importing the full registry may fail sooner. No defect was silently fixed externally.
+
+## Actual test evidence
+
+Safe local run on 27 November 2026: **23 collected, 23 passed, 7.20 seconds**. Python 3.12.14 / pytest 9.2.0. This differs from configured CI Python 3.11; no exact CI environment reproduction is claimed.
+
+- Isolated `.local/equityguard-review/venv`, `--system-site-packages` for existing pandas/numpy. pytest and its small dependencies installed into that venv only; no global installation.
+- `PYTEST_DISABLE_PLUGIN_AUTOLOAD=1`, `python -B`, pytest cache provider disabled.
+- Both `socket.socket.connect` and `socket.create_connection` replaced with denial functions before tests; no market/model calls, secrets, real embeddings or `/evaluate` endpoint.
+- Existing `tests/` run unmodified. SHA-256 inventory before/after matched all **109 source files**. Local run harness, JUnit and retriever check retained under `.local/equityguard-review/`.
+
+| File                 | Collected | What the assertions establish                                                                                                         | What they do not establish                                                                 |
+| -------------------- | --------: | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `test_guardrails.py` |         9 | Four advice phrases refused, three allowed questions, case handling, refusal message length                                           | General safety, prompt injection resistance, API behaviour                                 |
+| `test_technicals.py` |         7 | Test-local RSI and Bollinger formula examples, range/type/direction/short-history checks on synthetic price series                    | Production function parity, MACD, external provider or exception integration               |
+| `test_evaluation.py` |         7 | Case definitions exist, contain fields, have unique names and expected phrase-filter classifications, include refusal/normal examples | Live runner, model quality, API integration, tool selection or complete workflow execution |
+
+The authoritative résumé's broader testing description remains recorded above. No test count conflict was found; the distinction is scope. Public page preserves 23 and explains the actual source inventory. Future API/provider/production-function/retrieval tests are proposals.
+
+## Authentic UI asset
+
+`content-sources/equityguard/react-watchlist.png` is a new 1440 × 870 capture of the genuine React Home component, not a rebuilt mock-up. It shows NVDA selected and **zero-value offline price fixtures** (`{price: 0, change: 0}`). Twenty price requests were intercepted during startup/refresh; every non-local request was blocked, and all other `/api/` requests would fail the harness. The assessment button was not pressed. No model call, live price, analysis result or private thought text was captured. Its own “Live Market Data” subtitle is original app UI; the adjacent portfolio caption and alt text explicitly describe the offline capture.
+
+The pinned frontend's Vite 8 tooling failed on installed Node 22.11 (minimum 22.12 + missing native optional binding). A **separate disposable frontend copy** used Vite 6.4.6 / React plugin 4 to render the unchanged source. This is capture-only tooling, not a verified build of the pinned toolchain. A source CSS import-order warning means the remote Inter stylesheet was omitted; the app's system-font fallback rendered. No frontend source was edited. The existing Streamlit screenshot is historical and was not presented as the React app; existing result imagery was not reused.
+
+Responsive WebP derivatives and original capture are served under `/assets/equityguard/`. Social PNG is original code-native editorial artwork, not an application screenshot. Source attribution is this report plus pinned implementation links in the tool inspector.
+
+## Remaining evidence
+
+A working retrieval environment, explicit dependency configuration, actual end-to-end API/provider/agent tests and a sanitised authentic result capture remain useful. None is required to run this static portfolio. Remote CI success, container execution, deployment, market correctness and model accuracy were not verified. Source architecture is described at logical responsibility level only.

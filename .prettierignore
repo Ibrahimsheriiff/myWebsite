@@ -1,0 +1,11 @@
+node_modules
+.next
+out
+.local
+public
+assets
+index.html
+ibrahim-portfolio-seo-content.html
+package-lock.json
+artifacts
+next-env.d.ts

@@ -1,0 +1,62 @@
+{
+  "name": "ibrahim-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "assets": "node scripts/prepare-assets.mjs",
+    "build": "npm run assets && next build",
+    "lint": "eslint src tests scripts *.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "playwright test",
+    "preview": "node scripts/preview.mjs",
+    "screenshots": "node scripts/capture.mjs",
+    "audit": "node scripts/audit.mjs",
+    "format:check": "prettier --check src scripts tests docs AGENTS.md README.md *.mjs *.json .github/workflows/quality.yml",
+    "screenshots:review": "node scripts/review.mjs",
+    "audit:review": "node scripts/audit.mjs --phase-1b",
+    "screenshots:automark": "node scripts/capture-automark.mjs",
+    "audit:automark": "node scripts/audit.mjs --phase-2a1",
+    "screenshots:reconciliation": "node scripts/capture-reconciliation.mjs",
+    "audit:reconciliation": "node scripts/audit.mjs --phase-2a1",
+    "screenshots:equityguard": "node scripts/capture-equityguard.mjs",
+    "audit:equityguard": "node scripts/audit.mjs --phase-2b",
+    "screenshots:daita": "node scripts/capture-daita.mjs",
+    "audit:daita": "node scripts/audit.mjs --phase-2c",
+    "screenshots:collection": "node scripts/capture-collection.mjs",
+    "audit:collection": "node scripts/audit.mjs --phase-2d",
+    "screenshots:lab": "node scripts/capture-lab.mjs",
+    "record:lab": "node scripts/record-lab.mjs",
+    "audit:lab": "node scripts/audit.mjs --phase-3a",
+    "screenshots:lab-collection": "node scripts/capture-lab-collection.mjs",
+    "record:lab-collection": "node scripts/record-lab-collection.mjs",
+    "audit:lab-collection": "node scripts/audit.mjs --phase-3b"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "next": "^16.4.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.1",
+    "@fontsource/geist": "^5.3.0",
+    "@fontsource/geist-mono": "^5.3.0",
+    "@fontsource/instrument-serif": "^5.3.0",
+    "@playwright/test": "^1.65.1",
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^26.6.11",
+    "@types/react": "^19.3.3",
+    "@types/react-dom": "^19.3.0",
+    "chrome-launcher": "^1.2.3",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.6",
+    "lighthouse": "^13.6.0",
+    "prettier": "^3.10.1",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^6.0.3"
+  }
+}

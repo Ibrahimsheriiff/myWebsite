@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "equityguard",
+    "wallSecondsIncludingDemonstrationPauses": 4.8483999999761584,
+    "longTasksOver50ms": 1,
+    "maxLongTaskMs": 132,
+    "maxDocumentNodes": 180,
+    "notes": "Local desktop Chromium, actual interaction recording. Includes deliberate reading pauses and video overhead; not field performance or processing latency."
+  },
+  {
+    "slug": "mediquery",
+    "wallSecondsIncludingDemonstrationPauses": 4.137200000047684,
+    "longTasksOver50ms": 0,
+    "maxLongTaskMs": 0,
+    "maxDocumentNodes": 199,
+    "notes": "Local desktop Chromium, actual interaction recording. Includes deliberate reading pauses and video overhead; not field performance or processing latency."
+  },
+  {
+    "slug": "returns-agent",
+    "wallSecondsIncludingDemonstrationPauses": 4.518899999976158,
+    "longTasksOver50ms": 0,
+    "maxLongTaskMs": 0,
+    "maxDocumentNodes": 194,
+    "notes": "Local desktop Chromium, actual interaction recording. Includes deliberate reading pauses and video overhead; not field performance or processing latency."
+  },
+  {
+    "slug": "daita",
+    "wallSecondsIncludingDemonstrationPauses": 2.4342999999523163,
+    "longTasksOver50ms": 0,
+    "maxLongTaskMs": 0,
+    "maxDocumentNodes": 212,
+    "notes": "Local desktop Chromium, actual interaction recording. Includes deliberate reading pauses and video overhead; not field performance or processing latency."
+  },
+  {
+    "slug": "automark",
+    "wallSecondsIncludingDemonstrationPauses": 18.586200000047683,
+    "longTasksOver50ms": 0,
+    "maxLongTaskMs": 0,
+    "maxDocumentNodes": 511,
+    "notes": "Local desktop Chromium, actual interaction recording. Includes deliberate reading pauses and video overhead; not field performance or processing latency."
+  }
+]

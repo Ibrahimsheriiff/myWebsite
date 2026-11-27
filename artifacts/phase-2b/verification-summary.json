@@ -1,0 +1,45 @@
+{
+  "dateLocal": "2026-11-27",
+  "branch": "codex/portfolio-2-phase-1",
+  "staticBuild": "passed",
+  "eslint": "passed (zero warnings)",
+  "typescript": "passed",
+  "formatting": "passed",
+  "portfolioBrowserTests": {
+    "passed": 30,
+    "projects": [
+      "desktop Chromium",
+      "iPhone 13 emulated Chromium"
+    ]
+  },
+  "equityguardSourceTests": {
+    "collected": 23,
+    "passed": 23,
+    "groups": {
+      "guardrails": 9,
+      "testLocalCalculations": 7,
+      "evaluationDefinitions": 7
+    },
+    "network": "blocked",
+    "sourceFilesUnchanged": 109,
+    "liveAgentEvaluation": "not run"
+  },
+  "axeViolations": 0,
+  "reviewWidths": [
+    1440,
+    1024,
+    768,
+    390,
+    320
+  ],
+  "textZoom": "200% at 1440,768,390,320; no overflow",
+  "finalScreenshots": 61,
+  "originalFilesPreserved": "9/9",
+  "lockfile": "unchanged",
+  "publicPrivacyScan": {
+    "textCodeFiles": 43,
+    "flagged": 0
+  },
+  "lighthouse": "performance-summary.json",
+  "productionActions": "none"
+}

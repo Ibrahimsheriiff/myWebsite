@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "mediquery",
+    "width": 1440,
+    "overflow": false
+  },
+  {
+    "slug": "returns-agent",
+    "width": 1440,
+    "overflow": false
+  },
+  {
+    "slug": "mediquery",
+    "width": 1024,
+    "overflow": false
+  },
+  {
+    "slug": "returns-agent",
+    "width": 1024,
+    "overflow": false
+  },
+  {
+    "slug": "mediquery",
+    "width": 768,
+    "overflow": false
+  },
+  {
+    "slug": "returns-agent",
+    "width": 768,
+    "overflow": false
+  },
+  {
+    "slug": "mediquery",
+    "width": 390,
+    "overflow": false
+  },
+  {
+    "slug": "returns-agent",
+    "width": 390,
+    "overflow": false
+  },
+  {
+    "slug": "mediquery",
+    "width": 320,
+    "overflow": false
+  },
+  {
+    "slug": "returns-agent",
+    "width": 320,
+    "overflow": false
+  }
+]

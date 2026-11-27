@@ -1,0 +1,1458 @@
+/* Focused editorial compositions and interaction details. Foundation tokens live in globals.css. */
+.automark-case-link {
+  margin-bottom: 1.3rem;
+  font-size: 0.875rem;
+}
+
+/* Introduction: align the two objects and bring the work closer. */
+.hero {
+  container: introduction / inline-size;
+}
+.hero .hero-grid {
+  grid-template-columns: 1.32fr 1fr;
+  gap: 3.25rem;
+  align-items: start;
+  padding-block: 3.7rem 3.6rem;
+}
+.hero .hero-copy {
+  padding-top: 1.25rem;
+}
+.hero .hero-description {
+  max-width: 450px;
+  line-height: 1.8;
+}
+.hero .hello {
+  margin-bottom: 1.3rem;
+}
+.hero .notebook-wrap {
+  padding-top: 0;
+}
+.work-section {
+  padding-top: 4.8rem;
+}
+.work-intro {
+  padding-bottom: 3.1rem;
+}
+
+/* A field notebook: stronger selection, a shorter explanation area, tactile edges. */
+.notebook-wrap .notebook-caption {
+  gap: 0.55rem;
+  color: #46543d;
+  margin-bottom: 1.1rem;
+}
+.notebook-invitation {
+  margin-left: auto;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #536649;
+}
+.notebook-wrap .notebook {
+  container: notebook / inline-size;
+  padding: 1.2rem 1.6rem 1rem 2rem;
+  transform: rotate(-2deg);
+  background-color: #e9ecdf;
+  background-image:
+    radial-gradient(#9eae8c 0.55px, transparent 0.55px),
+    repeating-linear-gradient(0deg, transparent, transparent 3px, #7c8c6d06 3px, #7c8c6d06 4px);
+  background-size:
+    16px 16px,
+    100% 4px;
+  border-color: #aebc9f;
+  box-shadow:
+    3px 4px 0 #d8ddcc,
+    0 12px 24px #24331c08;
+}
+.notebook .notebook-top {
+  min-height: 25px;
+}
+.notebook .notebook-top .mono {
+  font-size: 0.75rem;
+  letter-spacing: 0.09em;
+}
+.notebook-binding {
+  display: flex;
+  gap: 4px;
+  transform: rotate(90deg);
+  margin-right: -0.5rem;
+}
+.notebook-binding i {
+  width: 7px;
+  height: 7px;
+  border: 1px solid #94a480;
+  border-radius: 50%;
+  background: var(--paper);
+}
+.notebook .notebook-map {
+  height: 282px;
+}
+.notebook .notebook-connections {
+  color: #768b65;
+}
+.notebook .notebook-stage {
+  width: 124px;
+  padding-block: 0.2rem;
+}
+.notebook .stage-art {
+  width: 80px;
+  height: 72px;
+  border-radius: 51% 49% 44% 56%;
+  transition:
+    background 160ms,
+    box-shadow 160ms,
+    transform 160ms;
+}
+.notebook .stage-art svg {
+  width: 80px;
+  height: 72px;
+  stroke-width: 1.5;
+}
+.notebook .stage-name {
+  display: inline-flex;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.15rem 0.4rem;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  transition:
+    color 150ms,
+    background 150ms,
+    border-color 150ms;
+}
+.stage-word {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.stage-number {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.75rem;
+}
+.notebook .notebook-stage.is-active .stage-name {
+  background: #2c482f;
+  color: #f4f1e8;
+  text-decoration: none;
+  border-color: #2c482f;
+}
+.notebook .notebook-stage.is-active .stage-art {
+  background: #cfdbbf;
+  box-shadow: 0 0 0 1px #a1b88a;
+}
+.notebook .notebook-stage:hover .stage-art {
+  transform: translateY(-2px) rotate(2deg);
+}
+.notebook .notebook-stage:active .stage-art {
+  transform: translateY(1px);
+}
+.notebook .notebook-stage:not(.is-active):hover .stage-name {
+  border-color: #7c9268;
+  background: #dce3ce;
+}
+.notebook .stage-0 {
+  top: 10px;
+  left: -1%;
+}
+.notebook .stage-1 {
+  top: 1px;
+  right: 2%;
+}
+.notebook .stage-2 {
+  bottom: 6px;
+  right: -1%;
+}
+.notebook .stage-3 {
+  bottom: 0;
+  left: 3%;
+}
+.notebook .notebook-centre {
+  top: 111px;
+  left: 44%;
+  font-size: 1.8rem;
+  color: #596f49;
+}
+.notebook .notebook-panels {
+  min-height: 0;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  border-color: #a6b696;
+}
+.notebook .notebook-panels > [role='tabpanel'] {
+  display: grid;
+  grid-template-columns: 1.9rem 1fr;
+  align-items: start;
+  gap: 0.8rem;
+}
+.notebook .notebook-panels > [hidden] {
+  display: grid;
+}
+.panel-index {
+  font-size: 2rem;
+  color: #4c653d;
+  line-height: 1;
+}
+.notebook .notebook-panels h2 {
+  font-size: 1rem;
+  line-height: 1.35;
+  letter-spacing: -0.025em;
+}
+.notebook .notebook-panels p {
+  color: #405137;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  margin-top: 0.55rem;
+}
+.notebook .notebook-bottom {
+  padding-top: 0.6rem;
+  color: #4e6041;
+  font-size: 0.75rem;
+  gap: 0.5rem;
+}
+.notebook-wrap .notebook-note {
+  font-size: 1.3rem;
+  color: #4d653d;
+  bottom: -1.2rem;
+}
+
+/* AutoMark's responsibility and result are part of the story, not footnotes. */
+.project-narrative .project-name {
+  margin-bottom: 0.45rem;
+}
+.project-narrative .contribution-label {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 1.1rem;
+}
+.contribution-label .mono {
+  color: #536649;
+  font-size: 0.75rem;
+}
+.contribution-label strong {
+  font-size: 1rem;
+  font-weight: 550;
+  color: #273f2b;
+}
+.automark-visual > .project-outcome {
+  border-left: 2px solid #748d62;
+  padding-left: 0.9rem;
+  margin-block: 1.4rem;
+  color: #33492d;
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+.project-outcome .mono {
+  display: block;
+  color: #435a37;
+  font-size: 0.75rem;
+  margin-bottom: 0.4rem;
+}
+.architecture-strip {
+  padding-top: 1.5rem;
+}
+.architecture-strip > .mono {
+  color: #425b36;
+}
+.architecture-strip .grading-flow li {
+  font-size: 0.875rem;
+  color: #364e2c;
+}
+.architecture-strip .flow-icon {
+  width: 28px;
+}
+.architecture-strip .flow-icon svg {
+  width: 28px;
+  height: 28px;
+}
+.architecture-strip .grading-flow li:not(:last-child)::after {
+  top: 14px;
+  border-color: #899f77;
+}
+.screenshot-frame {
+  box-shadow: 0 12px 24px #263d300c;
+}
+.project-image-button picture {
+  aspect-ratio: 2904 / 1435;
+}
+.project-image-button img {
+  margin-top: -2.20386%;
+}
+.screenshot-topbar {
+  padding-block: 0.75rem;
+}
+.screenshot-topbar > .mono {
+  color: #465b3d;
+}
+.project-image-button .image-expand {
+  font-size: 0.8125rem;
+  padding: 0.5rem 0.8rem;
+  background: #243f2b;
+}
+.project-image-button:hover .image-expand {
+  background: #152c1b;
+}
+
+/* EquityGuard remains open and radial, with explicit input and response boundaries. */
+.agent-drawing.agent-drawing-refined {
+  container: agent / inline-size;
+  padding: 0;
+  border: 0;
+  height: auto;
+  max-width: none;
+}
+.diagram-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  border-top: 1px solid #aebba1;
+  padding-top: 1rem;
+}
+.diagram-heading > .mono {
+  color: #3f5634;
+}
+.diagram-heading > span:last-child {
+  font-size: 0.75rem;
+  color: #536348;
+}
+.equity-input {
+  width: fit-content;
+  max-width: 100%;
+  margin: 1.6rem auto 0;
+  text-align: center;
+}
+.equity-input > .mono {
+  color: #5a6b4e;
+  display: block;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+.equity-input > span:last-child {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+.equity-map {
+  position: relative;
+  aspect-ratio: 520 / 290;
+  width: 100%;
+  container-type: inline-size;
+}
+.equity-connections {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  stroke: #8ea47d;
+  stroke-width: 1;
+}
+.equity-connections circle:first-of-type {
+  fill: #e1e8d5;
+  stroke: #7f9b69;
+}
+.equity-connections-narrow {
+  display: none;
+}
+.equity-connections circle:nth-of-type(2) {
+  opacity: 0.65;
+}
+.equity-connections .diagram-direction {
+  stroke: #536d43;
+}
+.equity-orchestrator {
+  position: absolute;
+  top: 54.138%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.equity-orchestrator .serif {
+  display: block;
+  font-size: clamp(1.5rem, 6.8cqw, 2.3rem);
+  color: #344f2b;
+  line-height: 0.93;
+}
+.equity-tool {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 138px;
+  padding: 0.35rem 0.2rem;
+  background: var(--paper);
+}
+.equity-tool svg {
+  width: 34px;
+  height: 28px;
+  stroke: #48613b;
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  margin-bottom: 0.35rem;
+}
+.diagram-faint {
+  opacity: 0.45;
+}
+.equity-tool strong {
+  font-size: 0.875rem;
+  color: #334b2c;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.equity-tool > span {
+  font-size: 0.75rem;
+  color: #5c6951;
+  line-height: 1.5;
+}
+.equity-tool-market {
+  top: 8%;
+  left: 0;
+}
+.equity-tool-technicals {
+  top: 8%;
+  right: 0;
+}
+.equity-tool-news {
+  bottom: 0;
+  left: 0;
+}
+.equity-tool-context {
+  bottom: 0;
+  right: 0;
+}
+.equity-response {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  border-block: 1px solid #9fb28e;
+  padding-block: 0.95rem;
+}
+.equity-response .mono {
+  display: block;
+  font-size: 0.75rem;
+  color: #536b45;
+  margin-bottom: 0.25rem;
+}
+.equity-response strong {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.response-fields {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.35rem 0.65rem;
+  max-width: 230px;
+}
+.response-fields span {
+  font-size: 0.75rem;
+  font-family: var(--font-mono), monospace;
+  color: #536a45;
+}
+.equity-loop-note {
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  color: #58654e;
+  margin-top: 0.85rem;
+  max-width: 430px;
+}
+.equity-evidence {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1.3rem;
+}
+.evaluation-symbol {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #899f76;
+  border-radius: 50%;
+  color: #3d5c30;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+}
+.equity-evidence strong {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #2f4728;
+}
+.equity-evidence strong > span {
+  font-size: 2rem;
+  letter-spacing: -0.06em;
+  padding-right: 0.3rem;
+  vertical-align: baseline;
+}
+.equity-evidence p {
+  font-size: 0.75rem;
+  color: #58674d;
+  line-height: 1.5;
+}
+
+/* DAITA: three illustrated acts, with processing and rules made visible. */
+.financial-workflow {
+  grid-column: 1 / -1;
+  border-top: 1px solid #b6a78f;
+  margin-top: 0.7rem;
+  padding-top: 1.3rem;
+}
+.financial-workflow > figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.5rem;
+}
+.financial-workflow > figcaption > .mono {
+  color: #574d3a;
+}
+.financial-workflow > figcaption > span:last-child {
+  font-size: 0.75rem;
+  color: #6d604c;
+}
+.financial-stages {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  gap: 4rem;
+  padding: 0;
+  list-style: none;
+  margin: 2rem 0 0;
+}
+.financial-stages > li {
+  position: relative;
+  min-width: 0;
+}
+.financial-stages > li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 84px;
+  left: calc(100% + 0.6rem);
+  width: 2.8rem;
+  border-top: 1px solid #a28e6e;
+}
+.financial-visual {
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.financial-documents {
+  position: relative;
+  width: 240px;
+  height: 155px;
+}
+.financial-documents > div {
+  position: absolute;
+  width: 102px;
+  height: 139px;
+  padding: 14px 12px;
+  background: #eee8dc;
+  border: 1px solid #9b886a;
+  transform-origin: bottom center;
+}
+.financial-documents > div:nth-child(1) {
+  left: 4px;
+  top: 5px;
+  transform: rotate(-12deg);
+}
+.financial-documents > div:nth-child(2) {
+  left: 66px;
+  top: 0;
+  transform: rotate(-2deg);
+}
+.financial-documents > div:nth-child(3) {
+  left: 130px;
+  top: 9px;
+  transform: rotate(10deg);
+}
+.financial-documents .mono {
+  font-size: 1.0625rem;
+  display: block;
+  color: #68573c;
+  padding-bottom: 1rem;
+}
+.financial-documents i {
+  display: block;
+  height: 1px;
+  background: #b9aa92;
+  margin-block: 10px;
+}
+.financial-documents i:last-child {
+  width: 65%;
+}
+.financial-processing {
+  width: 100%;
+  max-width: 300px;
+}
+.financial-processing > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 0.3rem;
+  border-block: 1px solid #b7a68a;
+}
+.financial-processing > div + div {
+  margin-top: 1.2rem;
+}
+.process-glyph {
+  font-family: var(--font-mono), monospace;
+  font-size: 1.2rem;
+  color: #6c5635;
+  min-width: 36px;
+  text-align: center;
+}
+.financial-processing > div > span:last-child {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #473e30;
+  line-height: 1.5;
+}
+.financial-processing small {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #6d5f49;
+  margin-top: 0.15rem;
+}
+.financial-report {
+  width: 100%;
+  max-width: 280px;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid #a68f6c;
+  background: #efe8db;
+  transform: rotate(2deg);
+}
+.financial-report > .mono {
+  display: block;
+  color: #645137;
+  border-bottom: 1px solid #c3b295;
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+.financial-report p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8125rem;
+  gap: 0.5rem;
+  padding-block: 0.4rem;
+  color: #4e4332;
+}
+.financial-report i {
+  width: 7px;
+  height: 7px;
+  border: 1px solid #9b8766;
+  flex-shrink: 0;
+}
+.financial-stage-caption {
+  display: flex;
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #c3b79f;
+}
+.financial-stage-caption > .mono {
+  color: #716047;
+  padding-top: 0.15rem;
+}
+.financial-stage-caption h4 {
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+  line-height: 1.5;
+  margin: 0;
+}
+.financial-stage-caption p {
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: #655845;
+  margin-top: 0.5rem;
+  max-width: 290px;
+}
+
+/* Precise response without introducing decorative movement. */
+.button:active {
+  transform: translateY(1px);
+  background: #152c1b;
+}
+.button {
+  transition:
+    background 140ms,
+    transform 100ms;
+}
+.desktop-nav > a:not(.resume-link) {
+  text-decoration-color: #839576;
+  text-underline-offset: 0.4rem;
+  text-decoration-thickness: 1px;
+}
+.desktop-nav > a:not(.resume-link):hover {
+  color: #35552c;
+}
+.desktop-nav > .resume-link:hover {
+  background: #e3e7d8;
+  border-color: #77896b;
+  text-decoration: none;
+}
+.project-archive summary {
+  transition:
+    color 150ms,
+    background 150ms;
+}
+.project-archive summary:hover,
+.project-archive details[open] > summary {
+  color: #2b4d2a;
+  background: #e6e9dc;
+}
+.project-archive summary .archive-plus {
+  border: 1px solid #bdc8b1;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+.project-archive summary {
+  grid-template-columns: 24px 1.2fr 1fr 24px;
+}
+.project-reflection summary {
+  padding-block: 0.3rem;
+}
+.project-reflection summary:hover {
+  color: #254a2a;
+}
+.image-dialog .dialog-close {
+  padding: 0.55rem 0.7rem;
+}
+.image-dialog .dialog-close:hover {
+  background: #dce3d1;
+}
+.social-links .text-link:hover,
+.email-link:hover,
+.site-footer > a:hover {
+  color: #2d5b32;
+}
+
+@media (min-width: 641px) and (max-width: 1199px) {
+  .hero .hero-grid {
+    grid-template-columns: 1.12fr 1fr;
+    gap: 2rem;
+    padding-block: 3.1rem;
+  }
+  .hero h1 {
+    font-size: clamp(2.4rem, 5.1vw, 3.8rem);
+  }
+  .hero .hero-copy {
+    padding-top: 1rem;
+  }
+  .notebook-wrap .notebook {
+    padding-inline: 1.6rem 1rem;
+  }
+  .notebook .notebook-top .mono {
+    max-width: 225px;
+  }
+  .notebook .notebook-map {
+    height: 260px;
+  }
+  .notebook .notebook-stage {
+    width: 114px;
+  }
+  .notebook .stage-art,
+  .notebook .stage-art svg {
+    width: 68px;
+    height: 64px;
+  }
+  .notebook .stage-name {
+    font-size: 0.8125rem;
+    gap: 0.25rem;
+  }
+  .notebook .stage-number {
+    font-size: 0.75rem;
+  }
+  .notebook .notebook-centre {
+    top: 100px;
+    font-size: 1.55rem;
+  }
+  .notebook .notebook-panels {
+    min-height: 0;
+  }
+  .notebook .notebook-panels > [role='tabpanel'] {
+    grid-template-columns: 1.5rem 1fr;
+    gap: 0.6rem;
+  }
+  .notebook .panel-index {
+    font-size: 1.7rem;
+  }
+  .notebook .notebook-bottom > span:first-child {
+    max-width: 210px;
+  }
+  .notebook-invitation {
+    font-size: 0.75rem;
+  }
+  .equityguard {
+    gap: 3rem;
+  }
+  .equity-tool {
+    width: 115px;
+  }
+  .equity-tool strong {
+    font-size: 0.8125rem;
+  }
+  .equity-response {
+    flex-direction: column;
+    align-items: start;
+    gap: 0.65rem;
+  }
+  .response-fields {
+    justify-content: flex-start;
+    max-width: none;
+  }
+  .financial-stages {
+    gap: 2.25rem;
+  }
+  .financial-stages > li:not(:last-child)::after {
+    width: 1.1rem;
+  }
+  .financial-documents {
+    transform: scale(0.85);
+  }
+  .financial-processing > div {
+    gap: 0.5rem;
+  }
+  .financial-report {
+    padding-inline: 0.8rem;
+  }
+}
+@media (min-width: 641px) and (max-width: 850px) {
+  .notebook-invitation {
+    margin-left: 0;
+    display: block;
+    width: fit-content;
+  }
+  .notebook-wrap .notebook-caption {
+    flex-wrap: wrap;
+    row-gap: 0.2rem;
+  }
+  .notebook .notebook-map {
+    height: 250px;
+  }
+  .notebook .notebook-stage {
+    width: 100px;
+  }
+  .notebook .stage-name {
+    gap: 0.2rem;
+    padding-inline: 0.2rem;
+  }
+  .notebook .stage-number {
+    display: none;
+  }
+  .notebook .stage-art,
+  .notebook .stage-art svg {
+    width: 64px;
+    height: 60px;
+  }
+  .notebook .notebook-centre {
+    top: 99px;
+    left: 43%;
+    font-size: 1.4rem;
+  }
+  .notebook .notebook-bottom {
+    flex-wrap: wrap;
+  }
+  .notebook-wrap .notebook-note {
+    font-size: 1.15rem;
+  }
+  .project-narrative .contribution-label {
+    grid-column: 1 / -1;
+  }
+  .project-narrative .contribution-label {
+    margin-bottom: 1rem;
+  }
+  .equityguard {
+    grid-template-columns: 1fr;
+  }
+  .equityguard .agent-drawing {
+    max-width: 590px;
+    width: 100%;
+    justify-self: end;
+  }
+  .equity-tool {
+    width: 138px;
+  }
+  .financial-stages {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.75rem;
+  }
+  .financial-visual {
+    height: 190px;
+  }
+  .financial-documents {
+    transform: scale(0.72);
+  }
+  .financial-processing > div {
+    flex-direction: column;
+    align-items: start;
+    gap: 0.2rem;
+    padding-block: 0.5rem;
+  }
+  .financial-processing > div + div {
+    margin-top: 0.6rem;
+  }
+  .process-glyph {
+    display: none;
+  }
+  .financial-report {
+    padding-inline: 0.65rem;
+    transform: none;
+  }
+  .financial-stages > li:not(:last-child)::after {
+    width: 0.65rem;
+    left: calc(100% + 0.5rem);
+  }
+}
+@media (max-width: 640px) {
+  .hero .hero-grid {
+    grid-template-columns: 1fr;
+    padding-block: 2.1rem 2.7rem;
+    gap: 2.7rem;
+  }
+  .hero .hero-copy {
+    padding-top: 0;
+  }
+  .hero .hero-description {
+    max-width: none;
+  }
+  .hero .hero-meta {
+    flex-wrap: nowrap;
+    align-items: start;
+    gap: 0.5rem;
+  }
+  .hero .hero-meta .eyebrow {
+    max-width: none;
+    white-space: nowrap;
+    font-size: 0.75rem;
+    letter-spacing: 0.055em;
+  }
+  .identity-tagline {
+    display: none;
+  }
+  .hero .sydney-time {
+    max-width: none;
+    font-size: 0.75rem;
+    column-gap: 0.4rem;
+    row-gap: 0.1rem;
+  }
+  .hero .sydney-time .city {
+    white-space: nowrap;
+  }
+  .notebook-wrap .notebook-caption {
+    font-size: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .notebook-wrap .notebook {
+    padding-inline: 1.65rem 1.1rem;
+  }
+  .notebook .notebook-map {
+    height: 258px;
+  }
+  .notebook .notebook-top .mono {
+    max-width: 220px;
+    font-size: 0.75rem;
+  }
+  .notebook .notebook-stage {
+    width: 116px;
+  }
+  .notebook .stage-art,
+  .notebook .stage-art svg {
+    width: 73px;
+    height: 67px;
+  }
+  .notebook .stage-name {
+    font-size: 0.8125rem;
+  }
+  .notebook .stage-number {
+    font-size: 0.75rem;
+  }
+  .notebook .stage-0 {
+    left: -3%;
+  }
+  .notebook .stage-1 {
+    right: -1%;
+  }
+  .notebook .stage-2 {
+    right: -3%;
+  }
+  .notebook .stage-3 {
+    left: 0;
+  }
+  .notebook .notebook-centre {
+    left: 42%;
+    top: 101px;
+    font-size: 1.55rem;
+  }
+  .notebook .notebook-panels {
+    min-height: 0;
+  }
+  .notebook .notebook-panels > [role='tabpanel'] {
+    grid-template-columns: 1.5rem 1fr;
+    gap: 0.6rem;
+  }
+  .notebook .panel-index {
+    font-size: 1.7rem;
+  }
+  .notebook .notebook-panels h2 {
+    font-size: 1rem;
+  }
+  .notebook .notebook-bottom {
+    align-items: end;
+    gap: 0.5rem;
+  }
+  .notebook .notebook-bottom > span:first-child {
+    max-width: 210px;
+    font-size: 0.75rem;
+  }
+  .notebook-wrap .notebook-note {
+    font-size: 1.2rem;
+  }
+  .work-section {
+    padding-top: 2.85rem;
+  }
+  .work-intro {
+    padding-bottom: 2.15rem;
+  }
+  .project-narrative .contribution-label {
+    margin-top: 0;
+  }
+  .architecture-strip .grading-flow li {
+    font-size: 0.8125rem;
+  }
+  .architecture-strip .flow-icon,
+  .architecture-strip .flow-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+  .project-image-button .image-expand {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem;
+  }
+  .equityguard {
+    gap: 2rem;
+  }
+  .diagram-heading {
+    align-items: start;
+    gap: 0.8rem;
+  }
+  .diagram-heading > .mono {
+    max-width: 180px;
+  }
+  .diagram-heading > span:last-child {
+    text-align: right;
+    max-width: 85px;
+  }
+  .equity-input {
+    margin-top: 1.3rem;
+  }
+  .equity-map {
+    aspect-ratio: 340 / 268;
+  }
+  .equity-connections {
+    width: 100%;
+    height: 100%;
+  }
+  .equity-connections-wide {
+    display: none;
+  }
+  .equity-connections-narrow {
+    display: block;
+  }
+  .equity-orchestrator {
+    top: 54.138%;
+  }
+  .equity-orchestrator .serif {
+    font-size: clamp(1.45rem, 7cqw, 1.9rem);
+  }
+  .equity-tool {
+    width: 106px;
+  }
+  .equity-tool svg {
+    width: 28px;
+    height: 24px;
+    margin-bottom: 0.25rem;
+  }
+  .equity-tool strong {
+    font-size: 0.8125rem;
+  }
+  .equity-tool > span {
+    font-size: 0.75rem;
+  }
+  .equity-tool-market,
+  .equity-tool-technicals {
+    top: 2%;
+  }
+  .equity-tool-news,
+  .equity-tool-context {
+    bottom: 1%;
+  }
+  .equity-response {
+    flex-direction: column;
+    align-items: start;
+    gap: 0.6rem;
+  }
+  .response-fields {
+    justify-content: start;
+    max-width: none;
+  }
+  .equity-loop-note {
+    font-size: 0.875rem;
+  }
+  .equity-evidence {
+    margin-top: 1.1rem;
+  }
+  .equity-evidence strong {
+    font-size: 0.9375rem;
+  }
+  .equity-evidence strong > span {
+    font-size: 2rem;
+  }
+  .financial-workflow {
+    margin-top: 0;
+    padding-top: 1.1rem;
+  }
+  .financial-workflow > figcaption {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .financial-stages {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+    margin-top: 1.3rem;
+  }
+  .financial-visual {
+    height: 145px;
+    justify-content: start;
+    width: 96px;
+    min-width: 0;
+  }
+  .financial-stages > li {
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: 1rem;
+    align-items: center;
+  }
+  .financial-documents {
+    margin-left: 0;
+    transform: none;
+    width: 96px;
+    height: 120px;
+  }
+  .financial-documents > div {
+    width: 52px;
+    height: 96px;
+    padding: 8px 5px;
+  }
+  .financial-documents > div:nth-child(1) {
+    left: 0;
+    top: 9px;
+  }
+  .financial-documents > div:nth-child(2) {
+    left: 20px;
+    top: 3px;
+  }
+  .financial-documents > div:nth-child(3) {
+    left: 40px;
+    top: 9px;
+  }
+  .financial-documents .mono {
+    font-size: 0.75rem;
+    padding-bottom: 0.5rem;
+    overflow-wrap: anywhere;
+  }
+  .financial-documents i {
+    margin-block: 7px;
+  }
+  .financial-processing {
+    max-width: 100%;
+  }
+  .financial-processing > div {
+    padding-block: 0.65rem;
+    gap: 0;
+  }
+  .financial-processing > div > span:last-child {
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+  .financial-processing > div + div {
+    margin-top: 0.7rem;
+  }
+  .financial-processing .process-glyph,
+  .financial-processing small {
+    display: none;
+  }
+  .financial-report {
+    max-width: 100%;
+    margin-left: 0;
+    padding: 0.6rem;
+  }
+  .financial-report > .mono {
+    font-size: 0.75rem;
+    overflow-wrap: anywhere;
+  }
+  .financial-report p {
+    padding-block: 0.3rem;
+  }
+  .financial-report p > span {
+    display: none;
+  }
+  .financial-report p::before {
+    content: '';
+    width: 65%;
+    border-bottom: 1px solid #b3a081;
+  }
+  .financial-stage-caption {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+    display: block;
+  }
+  .financial-stage-caption > .mono {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  .financial-stage-caption h4 {
+    font-size: 0.9375rem;
+  }
+  .financial-stage-caption p {
+    max-width: none;
+  }
+  .financial-stages > li:not(:last-child)::after {
+    top: auto;
+    left: 48px;
+    bottom: -1.6rem;
+    width: 0;
+    height: 1.1rem;
+    border: 0;
+    border-left: 1px solid #a28e6e;
+  }
+  .project-archive summary {
+    grid-template-columns: 17px 1fr 24px;
+  }
+}
+@media (max-width: 360px) {
+  .hero .hero-meta .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+  }
+  .hero .sydney-time {
+    font-size: 0.75rem;
+    column-gap: 0.3rem;
+  }
+  .hero-final {
+    display: inline-block;
+    font-size: 0.84em;
+  }
+  .notebook-invitation {
+    margin-left: auto;
+  }
+  .notebook .notebook-map {
+    height: 246px;
+  }
+  .notebook .notebook-stage {
+    width: 108px;
+  }
+  .notebook .stage-art,
+  .notebook .stage-art svg {
+    width: 67px;
+    height: 63px;
+  }
+  .notebook .stage-number {
+    display: none;
+  }
+  .notebook .notebook-top .mono {
+    font-size: 0.75rem;
+    max-width: 200px;
+  }
+  .notebook .notebook-centre {
+    font-size: 1.4rem;
+    top: 98px;
+  }
+  .notebook .notebook-panels > [role='tabpanel'] {
+    grid-template-columns: 1.35rem 1fr;
+    gap: 0.45rem;
+  }
+  .notebook .notebook-bottom {
+    flex-wrap: wrap;
+  }
+  .notebook .notebook-bottom > span:first-child {
+    max-width: 180px;
+  }
+  .notebook-wrap .notebook-note {
+    font-size: 1.05rem;
+  }
+  .equity-tool {
+    width: 95px;
+  }
+  .equity-tool > span {
+    max-width: 90px;
+  }
+}
+/* At enlarged text sizes, let the drawings reflow instead of forcing fixed coordinates. */
+@container introduction (max-width: 12rem) {
+  .hero .hero-meta {
+    flex-wrap: wrap;
+  }
+  .hero .hero-meta .eyebrow {
+    white-space: normal;
+  }
+}
+@container notebook (max-width: 12rem) {
+  .notebook .notebook-map {
+    height: auto;
+  }
+  .notebook .notebook-stages {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 0.5rem;
+  }
+  .notebook .notebook-stage {
+    position: static;
+    width: 100%;
+    transform: none;
+  }
+  .notebook .notebook-centre,
+  .notebook .notebook-connections {
+    display: none;
+  }
+  .notebook .stage-number {
+    display: none;
+  }
+  .notebook .notebook-bottom {
+    flex-wrap: wrap;
+  }
+  .notebook .notebook-panels > [role='tabpanel'] {
+    grid-template-columns: 1fr;
+  }
+  .panel-index {
+    display: none;
+  }
+}
+@container agent (max-width: 16rem) {
+  .equity-map {
+    display: grid;
+    grid-template-columns: 1fr;
+    aspect-ratio: auto;
+    gap: 0.75rem;
+  }
+  .equity-map .equity-connections {
+    display: none;
+  }
+  .equity-orchestrator {
+    position: static;
+    transform: none;
+    padding: 1rem 0;
+    border-block: 1px solid #bcc9af;
+  }
+  .equity-tool {
+    position: static;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+  .equity-tool > span {
+    max-width: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .notebook .stage-art,
+  .notebook .stage-name,
+  .project-archive summary {
+    transition: none;
+  }
+  .button:active,
+  .notebook .notebook-stage:hover .stage-art,
+  .notebook .notebook-stage:active .stage-art {
+    transform: none;
+  }
+}
+
+/* Phase 2B: targeted project navigation; preserve the approved homepage composition. */
+.equity-study-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  margin-top: 1.6rem;
+}
+
+/* A font-relative navigation boundary also reflows when text is enlarged. */
+.site-header {
+  container: site-navigation / inline-size;
+}
+@container site-navigation (max-width: 48rem) {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  .mobile-menu summary {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    font-size: 0.8rem;
+  }
+  .mobile-menu summary > span {
+    transition: transform 180ms;
+  }
+  .mobile-menu[open] summary > span {
+    transform: rotate(45deg);
+  }
+  .mobile-menu nav {
+    position: absolute;
+    top: calc(100% - 1px);
+    left: 0;
+    right: 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+    padding: 1.5rem 2rem 2rem;
+    display: grid;
+    gap: 0.7rem;
+    box-shadow: 0 12px 16px #263d3008;
+  }
+  .mobile-menu nav a {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+  }
+  .mobile-menu nav .resume-link {
+    color: var(--forest);
+  }
+}
+
+.daita-study-link {
+  margin-top: 1.5rem;
+}
+
+.case-study-links {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.5rem;
+  border-top: 1px solid #aebca1;
+  margin-top: 2rem;
+  padding-block: 1rem;
+}
+.case-study-links > span {
+  color: #52614a;
+  font-size: 0.6rem;
+}
+.case-study-links > a {
+  font-size: 0.76rem;
+  border-bottom: 1px solid #9da98e;
+}
+.archive-actions {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}

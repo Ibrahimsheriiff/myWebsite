@@ -1,0 +1,30 @@
+{
+  "mobile": {
+    "measuredAt": "2026-11-26T06:47:54.127Z",
+    "lighthouseVersion": "13.6.0",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "lcp": "1.5 s",
+    "cls": "0",
+    "totalBlockingTime": "20 ms",
+    "notes": "Local production static export. Simulated throttling; not field data. INP was not measured."
+  },
+  "desktop": {
+    "measuredAt": "2026-11-26T06:48:00.264Z",
+    "lighthouseVersion": "13.6.0",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "lcp": "0.3 s",
+    "cls": "0",
+    "totalBlockingTime": "0 ms",
+    "notes": "Local production static export. Simulated throttling; not field data. INP was not measured."
+  }
+}

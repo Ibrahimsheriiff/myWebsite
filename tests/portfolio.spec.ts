@@ -127,10 +127,14 @@ test('responsive layout, legacy fragments and accessibility', async ({ page }) =
   await page.evaluate(() => {
     document.documentElement.style.fontSize = '200%';
   });
-  expect(
-    await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),
-    'text enlargement should not cause page overflow',
-  ).toBeTruthy();
+  // Include a desktop scrollbar's effective width and the narrowest supported phone.
+  for (const width of [390, 375, 320]) {
+    await page.setViewportSize({ width, height: 900 });
+    expect(
+      await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),
+      `text enlargement should not cause page overflow at ${width}px`,
+    ).toBeTruthy();
+  }
 });
 
 test('essential content remains available without JavaScript', async ({ browser }) => {

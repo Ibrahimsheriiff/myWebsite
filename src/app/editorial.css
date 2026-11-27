@@ -1298,6 +1298,51 @@
   }
 }
 /* At enlarged text sizes, let the drawings reflow instead of forcing fixed coordinates. */
+.automark > .shell {
+  container: automark-summary / inline-size;
+}
+@container automark-summary (max-width: 16rem) {
+  .automark-evidence {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .project-topline {
+    flex-wrap: wrap;
+  }
+  .project-topline > span:last-child {
+    max-width: none;
+    text-align: left;
+  }
+  .automark-evidence > p > span {
+    max-width: none;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+}
+.financial-stage-caption,
+.diagram-heading {
+  overflow-wrap: anywhere;
+}
+.financial-workflow {
+  container: financial-demo / inline-size;
+}
+@container financial-demo (max-width: 16rem) {
+  .financial-stages > li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+  .financial-visual {
+    display: none;
+  }
+}
+.contact-section {
+  container: contact-signoff / inline-size;
+}
+@container contact-signoff (max-width: 12rem) {
+  .sign-off {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
 @container introduction (max-width: 12rem) {
   .hero .hero-meta {
     flex-wrap: wrap;

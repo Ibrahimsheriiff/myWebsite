@@ -1,0 +1,127 @@
+[
+  {
+    "width": 1440,
+    "states": [
+      {
+        "step": 1,
+        "overflow": false
+      },
+      {
+        "step": 2,
+        "overflow": false
+      },
+      {
+        "step": 3,
+        "overflow": false
+      },
+      {
+        "step": 4,
+        "overflow": false
+      },
+      {
+        "step": 5,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "width": 1024,
+    "states": [
+      {
+        "step": 1,
+        "overflow": false
+      },
+      {
+        "step": 2,
+        "overflow": false
+      },
+      {
+        "step": 3,
+        "overflow": false
+      },
+      {
+        "step": 4,
+        "overflow": false
+      },
+      {
+        "step": 5,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "states": [
+      {
+        "step": 1,
+        "overflow": false
+      },
+      {
+        "step": 2,
+        "overflow": false
+      },
+      {
+        "step": 3,
+        "overflow": false
+      },
+      {
+        "step": 4,
+        "overflow": false
+      },
+      {
+        "step": 5,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "states": [
+      {
+        "step": 1,
+        "overflow": false
+      },
+      {
+        "step": 2,
+        "overflow": false
+      },
+      {
+        "step": 3,
+        "overflow": false
+      },
+      {
+        "step": 4,
+        "overflow": false
+      },
+      {
+        "step": 5,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "states": [
+      {
+        "step": 1,
+        "overflow": false
+      },
+      {
+        "step": 2,
+        "overflow": false
+      },
+      {
+        "step": 3,
+        "overflow": false
+      },
+      {
+        "step": 4,
+        "overflow": false
+      },
+      {
+        "step": 5,
+        "overflow": false
+      }
+    ]
+  }
+]

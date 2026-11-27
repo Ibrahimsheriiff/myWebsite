@@ -1,0 +1,5 @@
+# Existing Cloudflare Pages project. Build with `npm run build` before deployment.
+# Keep source, internal inventories and preserved legacy HTML outside the public root.
+name = "ibrahim"
+pages_build_output_dir = "out"
+compatibility_date = "2026-11-27"

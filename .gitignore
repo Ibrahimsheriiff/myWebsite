@@ -1,1 +1,23 @@
 .DS_Store
+.local/
+node_modules/
+.next/
+out/
+test-results/
+playwright-report/
+*.tsbuildinfo
+artifacts/audits/
+artifacts/phase-1b/audits/
+artifacts/phase-2a/audits/
+artifacts/phase-2a1/audits/
+artifacts/phase-2b/audits/
+artifacts/phase-2c/audits/
+artifacts/phase-2d/audits/
+artifacts/phase-3a/audits/
+artifacts/phase-3b/audits/
+# Generated visual evidence stays local; keep the small measurement JSON reports.
+artifacts/**/*.png
+artifacts/**/*.webm
+# Regenerated from preserved legacy sources; never stage earlier local edits via copies.
+/public/assets/css/
+/public/assets/js/

@@ -1,0 +1,54 @@
+# Returns & Resolution Agent — pinned evidence and confidentiality
+
+Phase 2D, 27 November 2026. Internal authoring record; never a public asset or client import.
+
+## Sources and reconciliation
+
+The complete authoritative graduate résumé supports an independently built LangGraph returns system, customer interpretation/order retrieval, deterministic rules, structured Pydantic decisions, **13 automated tests** and LangSmith failure investigation. Source PDF SHA-256 `c5109e6c622a7b82ac94444b589c1d8d40926329689521b02814c3a1c7c1cff2`. The résumé accomplishment is retained as a historical baseline.
+
+Repository: [Ibrahimsheriiff/autonomous-returns-agent](https://github.com/Ibrahimsheriiff/autonomous-returns-agent/tree/d61617e6b6b554294a27a781b468bcab0427fd29), revision **d61617e6b6b554294a27a781b468bcab0427fd29**, commit 2 July 2026 at 23:40:36 UTC. Complete non-truncated tree: 28 files. Reviewed source, README, pyproject, uv.lock, CLI/Streamlit interfaces, workflow image and test inventory. No `.github` workflow exists in that tree; no CI run is claimed.
+
+The newer README expectation is 16 passed / 3 skipped. This review actually collected 19 and reproduced that outcome. It does not replace the résumé's 13-test accomplishment with an invented historical count. Individual assertions/cases inside the golden-suite test are not counted as separate pytest tests.
+
+## Actual architecture
+
+| Pinned source                                                                                                                                              | Evidence-safe description                                                                                                                                                                                                                                                                                                                 |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [graph.py](https://github.com/Ibrahimsheriiff/autonomous-returns-agent/blob/d61617e6b6b554294a27a781b468bcab0427fd29/src/returns_agent/graph.py)           | Eight registered nodes: agent, tools, observe_tool, parse_response, ask_customer, policy, draft_reply, validate. Tool loop returns observed order state to agent. Parsed response can ask, force lookup or enter policy. Every exit goes through validate. Default graph recursion limit 12.                                              |
+| [nodes.py](https://github.com/Ibrahimsheriiff/autonomous-returns-agent/blob/d61617e6b6b554294a27a781b468bcab0427fd29/src/returns_agent/nodes.py)           | Validates parsed routing, tool payload and reply structure. Separates deterministic policy outcome from model-written wording. Guards repeated failed lookup, missing context and clarification limits. Source guards are not a guarantee that every failure or interpretation is correct.                                                |
+| [models.py](https://github.com/Ibrahimsheriiff/autonomous-returns-agent/blob/d61617e6b6b554294a27a781b468bcab0427fd29/src/returns_agent/models.py) / state | Pydantic records with forbidden extra fields; frozen order/policy records. Reply strings must be non-empty and non-blank. Workflow state separates model-understood fields, trusted order data, policy result and final output. Exact assessment payload and proprietary categories/rules are not reproduced in the public demonstration. |
+| llm.py                                                                                                                                                     | Injectable agent, structured-response and reply models. Direct LangChain Anthropic integration; configured default model and optional runtime parameters are not proof of live provider behaviour. No live model call made.                                                                                                               |
+| Order tool                                                                                                                                                 | Normalises identifiers and reads a hardcoded mock store; found/not-found payloads. This is not a working production order integration. Original mock records, prices, item names and identifiers are not published.                                                                                                                       |
+| Policy                                                                                                                                                     | A deterministic Python function, separately instrumented. The portfolio explains responsibility boundaries, not assessment thresholds or company policy. Original rules are not copied into fixtures, screenshots or article.                                                                                                             |
+| LangSmith / local trace helper                                                                                                                             | Decorators instrument workflow/tool/parser calls. Optional hosted tracing is documented. Hosted traces were not accessed. Local Markdown helper reconstructs a high-level path from state; it is not a verified chronological event log. Neither helper output nor private reasoning is shown publicly.                                   |
+| Resume/termination                                                                                                                                         | Waiting turns can reuse prior state; terminal completed/failed/human-review states are protected from model reopening. No production persistence service or operational reliability guarantee inferred from this wrapper.                                                                                                                 |
+
+The article's graph linework uses verified node names and responsibility relationships. It is a logical illustration, not a fabricated conversation or execution trace. No company brand, assessment policy text, source-code excerpt, private trace or customer record is republished. The original Streamlit chat interface was not run because the compact article can demonstrate architecture without manufacturing a model conversation.
+
+## Safe external test run
+
+**19 collected; 16 passed; 3 skipped; 4.40s.** Python 3.12.14 / pytest 9.1.1. Isolated environment installed 53 packages from the source `uv.lock` with `uv sync --frozen --no-install-project --group dev`, using copied configuration files. Reviewed original source stayed separate and unchanged.
+
+| File group    | Collected | Actual verification                                                                                                                                                                 |
+| ------------- | --------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Workflow      |         8 | Deterministic injected model doubles exercise output shape, missing/unknown context, order lookup, resumed turns and graph rendering. Original private scenarios are not published. |
+| Policy        |         4 | Existing deterministic policy branches with source fixtures. These are original-project checks, not the portfolio's fictional rules.                                                |
+| Tools         |         3 | Trusted mock lookup, normalisation and found/not-found tool payloads. No external order API called.                                                                                 |
+| Golden suite  |         1 | Iterates its conversation cases and checks expected output/state/reply/trace summaries. One collected pytest function; private case contents remain local.                          |
+| Live provider |         3 | Deliberately skipped. No Anthropic service, credentials or paid calls.                                                                                                              |
+
+Before imports: API/tracing credentials removed from the process environment, dotenv disabled, live-test flag false, LangSmith/LangChain tracing false. Socket connect/create_connection blocked. Pytest cache, automatic plugin loading and bytecode writes disabled. No coverage percentage is reported. Original tests ran unchanged using deterministic injected doubles; no production graph/policy function was replaced.
+
+**28/28 reviewed source-file hashes matched before/after.** Raw JUnit/harness files stay under ignored `.local/phase-2d/`; only sanitised aggregate outcomes are delivered in `artifacts/phase-2d/source-test-summary.json`. This run establishes an offline-tested prototype, not live model quality, hosted-trace correctness or production readiness.
+
+## Fictional Policy Playground
+
+Public data/rules are newly authored under `src/content/policy-fixtures.ts`, pure logic in `src/lib/demo-policy.ts`. They are intentionally different from assessment policy and mock orders. Input: fictional reference, whole delivery-age field and sealed/opened/damaged condition. No live interpretation, lookup, conversation or order action.
+
+Priority is explicit: validate the age/condition; request a missing reference; route damage to a person; check a fictional 21-day window; route opened items to a person; otherwise show an illustrative return path. The window, grouping and result codes are portfolio inventions, not company rules or customer-rights guidance. Every result explains its applicable rule. No money values, original customer/order data or assessment criteria are used.
+
+Pure tests cover every rule, priority conflicts, 0/21/22/365 boundaries, blank/negative/decimal/invalid ages, missing reference and input immutability. Browser tests cover editable fields, preset states, missing/invalid input, condition selection, reset, keyboard/touch, no-JavaScript rule/outcome summaries and responsive accessibility. These tests are separate from the 19 external-project tests.
+
+## Remaining limitations
+
+Live provider tests remain skipped; remote traces, deployment, real order services, persistence and production behaviour are unverified. Further malformed-model-output/provider-failure coverage and operational data controls would be useful. No private trace, proprietary assessment material or actual customer record is needed to run the static portfolio.

@@ -1,0 +1,242 @@
+{
+  "homepage": {
+    "mobile": {
+      "measuredAt": "2026-11-27T02:22:22.995Z",
+      "lighthouseVersion": "13.6.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": "1.5 s",
+      "cls": "0",
+      "totalBlockingTime": "20 ms",
+      "notes": "Local production static export. Simulated throttling; not field data. INP was not measured."
+    },
+    "desktop": {
+      "measuredAt": "2026-11-27T02:22:29.635Z",
+      "lighthouseVersion": "13.6.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": "0.3 s",
+      "cls": "0",
+      "totalBlockingTime": "0 ms",
+      "notes": "Local production static export. Simulated throttling; not field data. INP was not measured."
+    }
+  },
+  "automark": {
+    "mobile": {
+      "measuredAt": "2026-11-27T02:22:36.027Z",
+      "lighthouseVersion": "13.6.0",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": "1.8 s",
+      "cls": "0",
+      "totalBlockingTime": "20 ms",
+      "notes": "Local production static export. Simulated throttling; not field data. INP was not measured."
+    },
+    "desktop": {
+      "measuredAt": "2026-11-27T02:22:41.948Z",
+      "lighthouseVersion": "13.6.0",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": "1.2 s",
+      "cls": "0",
+      "totalBlockingTime": "0 ms",
+      "notes": "Local production static export. Simulated throttling; not field data. INP was not measured."
+    }
+  },
+  "equityguard": {
+    "mobile": {
+      "measuredAt": "2026-11-27T02:22:48.761Z",
+      "lighthouseVersion": "13.6.0",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": "1.7 s",
+      "cls": "0",
+      "totalBlockingTime": "10 ms",
+      "notes": "Local production static export. Simulated throttling; not field data. INP was not measured."
+    },
+    "desktop": {
+      "measuredAt": "2026-11-27T02:22:54.975Z",
+      "lighthouseVersion": "13.6.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": "0.4 s",
+      "cls": "0",
+      "totalBlockingTime": "0 ms",
+      "notes": "Local production static export. Simulated throttling; not field data. INP was not measured."
+    }
+  },
+  "daita": {
+    "mobile": {
+      "measuredAt": "2026-11-27T02:23:01.401Z",
+      "lighthouseVersion": "13.6.0",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": "1.7 s",
+      "cls": "0",
+      "totalBlockingTime": "0 ms",
+      "notes": "Local production static export. Simulated throttling; not field data. INP was not measured."
+    },
+    "desktop": {
+      "measuredAt": "2026-11-27T02:23:07.500Z",
+      "lighthouseVersion": "13.6.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": "0.4 s",
+      "cls": "0",
+      "totalBlockingTime": "0 ms",
+      "notes": "Local production static export. Simulated throttling; not field data. INP was not measured."
+    }
+  },
+  "mediquery": {
+    "mobile": {
+      "measuredAt": "2026-11-27T02:23:13.315Z",
+      "lighthouseVersion": "13.6.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": "1.4 s",
+      "cls": "0",
+      "totalBlockingTime": "20 ms",
+      "notes": "Local production static export. Simulated throttling; not field data. INP was not measured."
+    },
+    "desktop": {
+      "measuredAt": "2026-11-27T02:23:18.996Z",
+      "lighthouseVersion": "13.6.0",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": "1.0 s",
+      "cls": "0",
+      "totalBlockingTime": "0 ms",
+      "notes": "Local production static export. Simulated throttling; not field data. INP was not measured."
+    }
+  },
+  "returns-agent": {
+    "mobile": {
+      "measuredAt": "2026-11-27T02:23:24.809Z",
+      "lighthouseVersion": "13.6.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": "1.4 s",
+      "cls": "0",
+      "totalBlockingTime": "20 ms",
+      "notes": "Local production static export. Simulated throttling; not field data. INP was not measured."
+    },
+    "desktop": {
+      "measuredAt": "2026-11-27T02:23:30.424Z",
+      "lighthouseVersion": "13.6.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": "0.3 s",
+      "cls": "0",
+      "totalBlockingTime": "0 ms",
+      "notes": "Local production static export. Simulated throttling; not field data. INP was not measured."
+    }
+  },
+  "lab": {
+    "mobile": {
+      "measuredAt": "2026-11-27T02:23:36.146Z",
+      "lighthouseVersion": "13.6.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": "1.5 s",
+      "cls": "0",
+      "totalBlockingTime": "20 ms",
+      "notes": "Local production static export. Simulated throttling; not field data. INP was not measured."
+    },
+    "desktop": {
+      "measuredAt": "2026-11-27T02:23:41.680Z",
+      "lighthouseVersion": "13.6.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": "0.3 s",
+      "cls": "0",
+      "totalBlockingTime": "0 ms",
+      "notes": "Local production static export. Simulated throttling; not field data. INP was not measured."
+    }
+  },
+  "lab-automark": {
+    "mobile": {
+      "measuredAt": "2026-11-27T02:23:47.350Z",
+      "lighthouseVersion": "13.6.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": "1.4 s",
+      "cls": "0",
+      "totalBlockingTime": "10 ms",
+      "notes": "Local production static export. Simulated throttling; not field data. INP was not measured."
+    },
+    "desktop": {
+      "measuredAt": "2026-11-27T02:23:53.063Z",
+      "lighthouseVersion": "13.6.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": "0.3 s",
+      "cls": "0",
+      "totalBlockingTime": "0 ms",
+      "notes": "Local production static export. Simulated throttling; not field data. INP was not measured."
+    }
+  }
+}

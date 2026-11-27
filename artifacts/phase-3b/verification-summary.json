@@ -1,0 +1,115 @@
+{
+  "phase": "3B",
+  "date": "2026-11-28",
+  "branch": "codex/portfolio-2-phase-1",
+  "productionBuild": "passed; twelve public pages statically exported",
+  "lint": "passed",
+  "strictTypeScript": "passed",
+  "formatting": "passed",
+  "portfolioSuite": {
+    "definitions": 59,
+    "passedExecutions": 118,
+    "failed": 0,
+    "reportedDuration": "1.3 minutes",
+    "priorExecutionsRetained": 74,
+    "newExecutions": 44
+  },
+  "finalScopedResponsiveChecks": {
+    "passed": 6,
+    "failed": 0
+  },
+  "viewportWidths": [
+    1440,
+    1024,
+    768,
+    390,
+    320
+  ],
+  "enlargedTextPercent": 200,
+  "enlargedTextWidths": [
+    1440,
+    768,
+    390,
+    320
+  ],
+  "horizontalOverflow": false,
+  "axe": "zero violations in tested initial, selected, error and review states; not full WCAG certification",
+  "keyboardTouchFocus": "verified in all four new workspaces",
+  "playbackCleanup": "one owned interval; speed replacement, visibility pause, rapid controls and navigation verified",
+  "bundleIsolation": "experiment code absent from homepage and Lab scripts, including hover",
+  "externalRuntimeRequests": false,
+  "currentResume": "verified from all twelve pages",
+  "noJavaScript": "disabled controls, initial records and representative explanations verified",
+  "screenshots": 186,
+  "recordings": [
+    {
+      "slug": "equityguard",
+      "duration": 5.88,
+      "width": 1440,
+      "height": 1000,
+      "bytes": 973123,
+      "decoded": true
+    },
+    {
+      "slug": "mediquery",
+      "duration": 5.4,
+      "width": 1440,
+      "height": 1000,
+      "bytes": 1165898,
+      "decoded": true
+    },
+    {
+      "slug": "returns-agent",
+      "duration": 5.68,
+      "width": 1440,
+      "height": 1000,
+      "bytes": 1101019,
+      "decoded": true
+    },
+    {
+      "slug": "daita",
+      "duration": 3.28,
+      "width": 1440,
+      "height": 1000,
+      "bytes": 691116,
+      "decoded": true
+    },
+    {
+      "slug": "automark",
+      "duration": 19.32,
+      "width": 1440,
+      "height": 1000,
+      "bytes": 2898268,
+      "decoded": true
+    }
+  ],
+  "preservationPrivacy": "preservation-privacy.json",
+  "runtime": "runtime-measurements.json",
+  "performance": "performance-summary.json",
+  "committedPushedMergedDeployed": false,
+  "unrelatedFeaturesStarted": false,
+  "lighthouse": {
+    "version": "13.6.0",
+    "routes": 12,
+    "deviceMeasurements": 24,
+    "performanceRange": [
+      98,
+      100
+    ],
+    "accessibility": 100,
+    "bestPractices": 100,
+    "seo": 100,
+    "lcpSecondsRange": [
+      0.3,
+      1.8
+    ],
+    "cls": 0,
+    "totalBlockingTimeMillisecondsRange": [
+      0,
+      40
+    ],
+    "targetsMet": true,
+    "fieldINPMeasured": false,
+    "scope": "Local production static export, simulated throttling; not field data"
+  }
+}

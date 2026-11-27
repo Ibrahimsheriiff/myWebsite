@@ -1,0 +1,221 @@
+.rw-input-line {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2rem;
+  padding: 1.5rem;
+  align-items: end;
+}
+.rw-responsibilities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-block: 1px solid #acb89e;
+}
+.rw-responsibilities > div {
+  padding: 1.5rem;
+}
+.rw-responsibilities > div:first-child {
+  background: #e4dccb;
+  border-right: 1px solid #acb89e;
+}
+.rw-responsibilities blockquote {
+  font:
+    1.8rem/1.3 var(--font-serif),
+    serif;
+  margin: 1rem 0;
+}
+.rw-responsibilities p {
+  font-size: 0.8125rem;
+}
+.rw-path {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  gap: 0.6rem;
+  margin: 1.5rem 0;
+}
+.rw-path li {
+  flex: 1 1 5rem;
+  border-bottom: 2px solid #9baa8a;
+  padding: 0.5rem 0;
+}
+.rw-path li[data-active='true'] {
+  border-color: #263d30;
+  background: #dce4ce;
+}
+.rw-path span {
+  display: block;
+  font-size: 0.875rem;
+}
+.rw-path small {
+  font-size: 0.6875rem;
+}
+.rw-decision-area {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+}
+.rw-current {
+  padding: 2rem;
+  min-height: 28rem;
+}
+.rw-current h3 {
+  font-size: 2rem;
+  max-width: 28rem;
+  margin: 1rem 0 1.5rem;
+}
+.rw-current > p {
+  margin: 1rem 0;
+}
+.rw-current form {
+  padding: 1.5rem;
+  background: #dfe6d4;
+  border-left: 3px solid #617c4a;
+}
+.rw-current form > p {
+  font-size: 0.8125rem;
+  margin: 1rem 0;
+}
+.rw-current form button {
+  margin: 1rem 0;
+}
+.rw-current .rw-small {
+  font-size: 0.75rem;
+}
+.rw-order {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1rem 0;
+  border-block: 1px solid #acb89e;
+  padding: 1rem 0;
+  gap: 1rem;
+}
+.rw-order dt {
+  font-size: 0.75rem;
+}
+.rw-order dd {
+  margin: 0.5rem 0 0;
+  font:
+    0.875rem/1.5 var(--font-mono),
+    monospace;
+}
+.rw-policy {
+  background: #263d30;
+  color: #f4f1e8;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+.rw-policy > span {
+  font:
+    0.6875rem/1.6 var(--font-mono),
+    monospace;
+  color: #c1cfb1;
+}
+.rw-policy h4 {
+  font:
+    2rem/1.1 var(--font-serif),
+    serif;
+  margin: 1rem 0;
+}
+.rw-policy code {
+  color: #c1cfb1;
+}
+.rw-policy p {
+  margin-top: 1rem;
+}
+.rw-current summary {
+  font-size: 0.875rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #acb89e;
+}
+.rw-ledger {
+  padding: 2rem;
+  border-left: 1px solid #acb89e;
+  background: #e7ebde;
+}
+.rw-ledger ol {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+.rw-ledger li {
+  border-top: 1px solid #acb89e;
+  padding: 1rem 0;
+}
+.rw-ledger li > span {
+  font:
+    0.6875rem/1.6 var(--font-mono),
+    monospace;
+}
+.rw-ledger li > p {
+  font-size: 0.8125rem;
+  margin-top: 0.4rem;
+}
+.experiment-returns-agent .collection-cover h1 {
+  max-width: 35rem;
+}
+@container experiment (max-width:48rem) {
+  .rw-input-line {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .rw-responsibilities,
+  .rw-decision-area {
+    grid-template-columns: 1fr;
+  }
+  .rw-responsibilities > div:first-child {
+    border-right: 0;
+    border-bottom: 1px solid #acb89e;
+  }
+  .rw-ledger {
+    border-left: 0;
+    border-top: 1px solid #acb89e;
+  }
+  .rw-current {
+    min-height: 0;
+  }
+  .rw-responsibilities blockquote {
+    font-size: 1.6rem;
+  }
+}
+@container experiment (max-width:24rem) {
+  .rw-input-line,
+  .rw-responsibilities > div,
+  .rw-current,
+  .rw-ledger {
+    padding: 1rem;
+  }
+  .rw-current h3 {
+    font-size: 1.6rem;
+  }
+  .rw-order {
+    grid-template-columns: 1fr;
+  }
+  .rw-current form {
+    padding: 1rem;
+  }
+  .rw-policy {
+    padding: 1rem;
+  }
+}
+/* Rendered refinement: expose the actual clarification branch and keep continuation in context. */
+.rw-path li[data-active='true'] {
+  padding-inline: 0.5rem;
+  border-left: 2px solid #587346;
+}
+.rw-continue {
+  margin-top: 1.5rem;
+}
+.rw-fixture-choices {
+  margin: 0.5rem 0 1rem;
+}
+.rw-current .rw-fixture-choices button {
+  margin: 0;
+  font-size: 0.8125rem;
+}
+.rw-current form > button {
+  background: #263d30;
+  color: #f4f1e8;
+}
+.rw-current form > button:hover:not(:disabled) {
+  color: #263d30;
+}

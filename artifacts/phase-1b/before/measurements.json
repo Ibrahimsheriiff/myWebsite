@@ -1,0 +1,56 @@
+[
+  {
+    "width": 1440,
+    "documentWidth": 1440,
+    "heroHeight": 866.703125,
+    "workOffset": 966.703125,
+    "bodyCopy": "16px",
+    "notebook": 512.243896484375,
+    "agent": 561.375
+  },
+  {
+    "width": 1280,
+    "documentWidth": 1280,
+    "heroHeight": 866.703125,
+    "workOffset": 966.703125,
+    "bodyCopy": "16px",
+    "notebook": 491.85009765625,
+    "agent": 536.78125
+  },
+  {
+    "width": 1024,
+    "documentWidth": 1024,
+    "heroHeight": 846.703125,
+    "workOffset": 946.703125,
+    "bodyCopy": "16px",
+    "notebook": 446.629638671875,
+    "agent": 458.9375
+  },
+  {
+    "width": 768,
+    "documentWidth": 768,
+    "heroHeight": 829.90625,
+    "workOffset": 929.90625,
+    "bodyCopy": "16px",
+    "notebook": 355.349853515625,
+    "agent": 560
+  },
+  {
+    "width": 390,
+    "documentWidth": 390,
+    "heroHeight": 1227.25,
+    "workOffset": 1305.25,
+    "bodyCopy": "16px",
+    "notebook": 356.70928955078125,
+    "agent": 342
+  },
+  {
+    "width": 320,
+    "documentWidth": 320,
+    "heroHeight": 1422.484375,
+    "workOffset": 1500.484375,
+    "bodyCopy": "16px",
+    "notebook": 296.41668701171875,
+    "agent": 280
+  }
+]

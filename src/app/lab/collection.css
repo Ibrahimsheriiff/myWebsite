@@ -1,0 +1,255 @@
+.collection-cover {
+  padding: 2rem 0;
+}
+.collection-cover h1 {
+  font-size: clamp(3rem, 5vw, 5rem);
+  line-height: 1;
+  max-width: 53rem;
+  margin: 1rem 0 1.5rem;
+}
+.collection-cover h1 .serif {
+  color: #d0d8af;
+}
+.collection-intro {
+  max-width: 42rem;
+  color: #c0cdbb;
+  margin-bottom: 1.5rem;
+}
+.experiment-workspace {
+  --ew-rule: #acb89e;
+  background: #f4f1e8;
+  color: #263d30;
+  border: 1px solid #acb89e;
+  container: experiment / inline-size;
+}
+.experiment-workspace * {
+  min-width: 0;
+}
+.experiment-workspace :focus-visible {
+  outline: 2px solid #375f39;
+  outline-offset: 4px;
+}
+.experiment-workspace h2 {
+  font-size: 1.8rem;
+  letter-spacing: -0.04em;
+}
+.experiment-workspace h3 {
+  font-size: 1.3rem;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+}
+.experiment-workspace p,
+.experiment-workspace li {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+.experiment-workspace .lab-eyebrow {
+  font-size: 0.6875rem;
+  color: #526348;
+}
+.experiment-workspace button,
+.experiment-workspace select,
+.experiment-workspace input {
+  font: inherit;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #263d30;
+}
+.experiment-workspace button {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #8b9f76;
+  background: #f8f6ed;
+  min-height: 2.75rem;
+}
+.experiment-workspace button:hover:not(:disabled),
+.experiment-workspace button[aria-pressed='true'] {
+  background: #dce4ce;
+  border-color: #587346;
+}
+.experiment-workspace button:disabled,
+.experiment-workspace select:disabled,
+.experiment-workspace input:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.experiment-workspace label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+.experiment-workspace select,
+.experiment-workspace input {
+  display: block;
+  width: 100%;
+  border: 1px solid #8b9f76;
+  background: #faf8f1;
+  padding: 0.6rem 0.7rem;
+  margin-top: 0.4rem;
+}
+.experiment-workspace select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%23263d30'/%3E%3C/svg%3E");
+  background-position: right 0.65rem center;
+  background-repeat: no-repeat;
+  padding-right: 2rem;
+}
+.experiment-workspace pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font:
+    0.8125rem/1.7 var(--font-mono),
+    monospace;
+  margin: 1rem 0;
+}
+.experiment-workspace code {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.8125rem;
+}
+.ew-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid var(--ew-rule);
+}
+.ew-top [role='status'] {
+  font:
+    0.8125rem/1.6 var(--font-mono),
+    monospace;
+}
+.ew-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+.ew-actions > .ew-primary {
+  background: #263d30;
+  color: #f4f1e8;
+}
+.ew-note {
+  padding: 1rem 1.5rem;
+  font-size: 0.8125rem !important;
+  border-top: 1px solid var(--ew-rule);
+  color: #526348;
+}
+.ew-panel {
+  padding: 1.5rem;
+}
+.ew-panel > p {
+  margin-top: 1rem;
+}
+.ew-code {
+  background: #e6eadb;
+  border-block: 1px solid var(--ew-rule);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.ew-error {
+  border-left: 3px solid #8b4937;
+  padding-left: 1rem;
+  color: #783f2f;
+}
+.ew-table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+  font-size: 0.8125rem;
+  margin-top: 1rem;
+}
+.ew-table th,
+.ew-table td {
+  text-align: left;
+  border-top: 1px solid var(--ew-rule);
+  padding: 0.6rem 0.4rem;
+  overflow-wrap: anywhere;
+  font-weight: 400;
+}
+.ew-table th {
+  font-weight: 500;
+}
+.ew-table caption {
+  text-align: left;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.collection-lesson {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding-top: 2rem;
+  color: #c0cdbb;
+}
+.collection-lesson a {
+  justify-self: end;
+}
+.experiment-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.8rem 1.5rem;
+  border-top: 1px solid #61775f;
+  padding: 1.5rem 0 2.5rem;
+}
+.experiment-links a {
+  font-size: 0.875rem;
+  border-bottom: 1px solid #91a780;
+}
+.ew-disabled-note {
+  min-height: 2.5rem;
+  font-size: 0.75rem !important;
+  color: #526348;
+}
+.experiment-workspace mark {
+  background: #dce4ce;
+  color: #263d30;
+}
+.ew-list {
+  padding: 0;
+  list-style: none;
+}
+.ew-list > li {
+  border-top: 1px solid var(--ew-rule);
+  padding: 0.7rem 0;
+}
+.ew-blank {
+  color: #526348;
+  font-style: italic;
+}
+@container experiment (max-width:36rem) {
+  .ew-top {
+    flex-direction: column;
+    align-items: start;
+    padding: 1rem;
+  }
+  .ew-panel {
+    padding: 1rem;
+  }
+  .ew-note {
+    padding: 1rem;
+  }
+  .experiment-workspace h2 {
+    font-size: 1.5rem;
+  }
+  .experiment-workspace p,
+  .experiment-workspace li {
+    font-size: 1rem;
+  }
+}
+@container lab-page (max-width:48rem) {
+  .collection-cover h1 {
+    font-size: clamp(2.7rem, 10vw, 4rem);
+  }
+  .collection-lesson {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .collection-lesson a {
+    justify-self: start;
+  }
+}
+.experiment-workspace input {
+  accent-color: #375f39;
+}

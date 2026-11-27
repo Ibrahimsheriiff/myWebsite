@@ -1,0 +1,20 @@
+{
+  "returns": {
+    "tests": "19",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "3",
+    "time": "4.398",
+    "method": "Unmodified source tests; deterministic injected models; network blocked; live tests disabled",
+    "sourceFilesUnchanged": 28
+  },
+  "mediquery": {
+    "tests": "4",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0",
+    "time": "0.590",
+    "method": "Unmodified API test file with explicit vector/ingestion/generation service doubles; network blocked",
+    "sourceFilesUnchanged": 43
+  }
+}

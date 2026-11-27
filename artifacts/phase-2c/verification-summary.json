@@ -1,0 +1,102 @@
+{
+  "dateLocal": "2026-11-27",
+  "branch": "codex/portfolio-2-phase-1",
+  "build": "passed (four public routes exported)",
+  "eslint": "passed; zero warnings",
+  "typescript": "passed",
+  "formatting": "passed",
+  "browserAndTransformationExecutions": {
+    "passed": 40,
+    "projects": [
+      "desktop Chromium",
+      "iPhone 13 emulated Chromium"
+    ],
+    "newDaitaExecutions": 10,
+    "priorExecutions": 30
+  },
+  "axeViolations": 0,
+  "stageWidths": [
+    1440,
+    1024,
+    768,
+    390,
+    320
+  ],
+  "enlargedTextWidths": [
+    1440,
+    768,
+    390,
+    320
+  ],
+  "reducedMotion": "passed",
+  "noJavaScript": "passed",
+  "fictionalDataset": {
+    "records": 5,
+    "possibleRepeat": "R03 matches R01",
+    "incomplete": "R04 missing description",
+    "correctable": "R05 only"
+  },
+  "finalPngs": 72,
+  "preservationPrivacy": "preservation-privacy.json",
+  "lighthouse": "performance-summary.json",
+  "originalDaitaRuntime": "not executed or operationally verified",
+  "productionActions": "none",
+  "lighthouseScores": {
+    "homepage": {
+      "mobile": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      }
+    },
+    "automark": {
+      "mobile": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "desktop": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      }
+    },
+    "equityguard": {
+      "mobile": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      }
+    },
+    "daita": {
+      "mobile": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      }
+    }
+  }
+}
